@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1419">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Paris Tracker</title>
+<style>
+:root{--bg:#0f1419;--card:#18202a;--card2:#1f2933;--txt:#e6edf3;--mut:#8b98a5;--ok:#2ecc71;--ko:#e74c3c;--warn:#f39c12;--acc:#3b9eff;--line:#2a3541}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding-bottom:80px}
+header{padding:14px 16px;padding-top:max(14px,env(safe-area-inset-top));border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5;display:flex;justify-content:space-between;align-items:center}
+h1{font-size:18px;margin:0}
+.seg{display:flex;background:var(--card);border-radius:8px;overflow:hidden}
+.seg button{background:none;border:0;color:var(--mut);padding:6px 10px;font-size:13px}
+.seg button.on{background:var(--acc);color:#fff}
+main{max-width:720px;margin:0 auto;padding:12px}
+.tab{display:none}.tab.on{display:block}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav button{flex:1;background:none;border:0;color:var(--mut);padding:12px 4px;font-size:13px}
+nav button.on{color:var(--acc);font-weight:600}
+.card{background:var(--card);border-radius:12px;padding:12px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:var(--card);border-radius:12px;padding:10px 12px}
+.stat .l{color:var(--mut);font-size:12px}.stat .v{font-size:20px;font-weight:700;margin-top:2px}
+.pos{color:var(--ok)}.neg{color:var(--ko)}
+label{display:block;font-size:12px;color:var(--mut);margin:8px 0 3px}
+input,select{width:100%;background:var(--card2);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:10px;font-size:15px}
+.btn{background:var(--acc);color:#fff;border:0;border-radius:8px;padding:11px 14px;font-size:15px;font-weight:600;width:100%;margin-top:12px}
+.btn.sec{background:var(--card2);color:var(--txt);border:1px solid var(--line)}
+.btn.sm{width:auto;margin:0;padding:6px 10px;font-size:13px}
+.alert{border-radius:10px;padding:10px 12px;margin-bottom:12px;font-size:14px}
+.alert.ko{background:#3a1a1a;border:1px solid var(--ko)}
+.alert.warn{background:#3a2a10;border:1px solid var(--warn)}
+.alert.ok{background:#12301f;border:1px solid var(--ok)}
+.bet{border-bottom:1px solid var(--line);padding:10px 0}
+.bet:last-child{border:0}
+.bet .top{display:flex;justify-content:space-between;gap:8px}
+.bet .m{font-weight:600}.bet .s{color:var(--mut);font-size:13px;margin-top:2px}
+.badge{font-size:11px;padding:2px 7px;border-radius:99px;background:var(--card2);color:var(--mut);margin-left:6px}
+.badge.w{background:#12301f;color:var(--ok)}.badge.l{background:#3a1a1a;color:var(--ko)}.badge.p{background:#3a2a10;color:var(--warn)}
+.acts{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.hint{font-size:12px;color:var(--mut);margin-top:4px}
+svg{width:100%;height:auto;display:block}
+h2{font-size:15px;margin:0 0 8px}
+.empty{color:var(--mut);text-align:center;padding:24px 8px}
+.rep{font-size:13px;margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+.rep div{padding:2px 0}
+.ok{color:var(--ok)}.warnc{color:var(--warn)}
+.btn:disabled{opacity:.6}
+</style>
+</head>
+<body>
+<header>
+  <h1>⚽ Paris Tracker</h1>
+  <div class="seg" id="modeSeg">
+    <button data-m="all" class="on">Tous</button>
+    <button data-m="reel">Réel</button>
+    <button data-m="blanc">À blanc</button>
+  </div>
+</header>
+<main>
+
+<section class="tab on" id="tab-stats">
+  <div id="alerts"></div>
+  <div class="grid" id="kpis"></div>
+  <div class="card" style="margin-top:12px">
+    <h2>Évolution du bankroll</h2>
+    <div id="chart"></div>
+  </div>
+  <div class="card">
+    <h2>Par marché</h2>
+    <div id="byMarket"></div>
+  </div>
+  <div class="hint">CLV = cote prise / cote de clôture − 1. Un CLV moyen positif sur 100+ paris est le meilleur signe d'un vrai avantage.</div>
+</section>
+
+<section class="tab" id="tab-add">
+  <div class="card">
+    <h2 id="formTitle">Nouveau pari</h2>
+    <input type="hidden" id="f_id">
+    <div class="grid">
+      <div><label>Date du match</label><input type="date" id="f_date"></div>
+      <div><label>Mode</label><select id="f_mode"><option value="blanc">À blanc</option><option value="reel">Réel</option></select></div>
+    </div>
+    <label>Championnat</label>
+    <select id="f_champ"><option>Ligue 1</option><option>Premier League</option><option>La Liga</option><option>Serie A</option><option>Bundesliga</option><option>Autre</option></select>
+    <div class="grid">
+      <div><label>Domicile</label><input id="f_home" list="teamsDL" placeholder="ex. PSG" autocomplete="off"></div>
+      <div><label>Extérieur</label><input id="f_away" list="teamsDL" placeholder="ex. Marseille" autocomplete="off"></div>
+    </div>
+    <datalist id="teamsDL"></datalist>
+    <div class="hint" id="teamHint"></div>
+    <label>Marché / sélection</label>
+    <select id="f_market">
+      <option>1N2 - Domicile</option><option>1N2 - Nul</option><option>1N2 - Extérieur</option>
+      <option>+2,5 buts</option><option>-2,5 buts</option><option>BTTS Oui</option><option>BTTS Non</option><option>Autre</option>
+    </select>
+    <div class="grid3">
+      <div><label>Cote</label><input type="number" step="0.01" min="1.01" id="f_odds" inputmode="decimal"></div>
+      <div><label>Mise (€)</label><input type="number" step="0.5" min="0" id="f_stake" inputmode="decimal"></div>
+      <div><label>Ma proba (%)</label><input type="number" step="0.1" min="1" max="99" id="f_prob" inputmode="decimal"></div>
+    </div>
+    <div class="hint" id="calcHint"></div>
+    <div class="grid">
+      <div><label>Cote de clôture (option)</label><input type="number" step="0.01" min="1.01" id="f_close" inputmode="decimal"></div>
+      <div><label>Résultat</label><select id="f_res"><option value="p">En attente</option><option value="w">Gagné</option><option value="l">Perdu</option><option value="v">Annulé / remboursé</option></select></div>
+    </div>
+    <label>Opérateur / note (option)</label>
+    <input id="f_note" placeholder="ex. Winamax" autocomplete="off">
+    <button class="btn" id="saveBtn">Enregistrer</button>
+    <button class="btn sec" id="cancelBtn" style="display:none">Annuler la modification</button>
+  </div>
+</section>
+
+<section class="tab" id="tab-list">
+  <div class="card">
+    <button class="btn" id="syncBtn" style="margin-top:0">🔄 Régler les paris terminés</button>
+    <div class="hint" id="syncInfo"></div>
+    <div class="rep" id="syncReport" style="display:none"></div>
+  </div>
+  <div class="card" id="listBox"></div>
+</section>
+
+<section class="tab" id="tab-set">
+  <div class="card">
+    <h2>Paramètres</h2>
+    <label>Bankroll de départ (€)</label><input type="number" step="1" id="s_bank" inputmode="decimal">
+    <label>Mise max par pari (% du bankroll)</label><input type="number" step="0.1" id="s_max" inputmode="decimal">
+    <label>Stop-loss hebdomadaire (% du bankroll)</label><input type="number" step="0.1" id="s_stop" inputmode="decimal">
+    <button class="btn" id="s_save">Enregistrer</button>
+  </div>
+  <div class="card">
+    <h2>Règlement automatique</h2>
+    <label style="display:flex;gap:8px;align-items:center;color:var(--txt);font-size:14px"><input type="checkbox" id="s_auto" style="width:auto"> Régler automatiquement à l'ouverture de l'app</label>
+    <button class="btn" id="s_tok_save">Enregistrer</button>
+    <button class="btn sec" id="s_tok_test">Recharger les scores</button>
+    <div class="hint" id="s_tok_msg">Les scores viennent du fichier results.json, mis à jour toutes les 3 h par une tâche GitHub (données football-data.org).</div>
+  </div>
+  <div class="card">
+    <h2>Données</h2>
+    <button class="btn sec" id="expBtn">Exporter en CSV</button>
+    <label style="margin-top:12px">Importer un CSV (séparateur ;)</label>
+    <input type="file" id="impFile" accept=".csv,text/csv,text/plain">
+    <div class="hint">Format : date;match;marché;cote;mise;proba_estimée;edge;résultat;cote_clôture;championnat;mode;note. Les données restent sur cet appareil (localStorage). Exporte régulièrement pour sauvegarder.</div>
+    <button class="btn sec" id="resetBtn" style="color:var(--ko)">Tout effacer</button>
+  </div>
+</section>
+
+</main>
+<nav id="nav">
+  <button data-t="stats" class="on">📊 Stats</button>
+  <button data-t="add">➕ Pari</button>
+  <button data-t="list">📋 Liste</button>
+  <button data-t="set">⚙️ Réglages</button>
+</nav>
+
+<script>
+const KEY='paris_tracker_v1';
+const DEF={settings:{bank:200,maxPct:2,stopPct:10,autoSync:true,lastSync:0},bets:[]};
+let S=load();let mode='all';delete S.settings.token;
+
+function load(){try{const d=JSON.parse(localStorage.getItem(KEY));if(d&&d.bets)return{settings:{...DEF.settings,...d.settings},bets:d.bets}}catch(e){}return JSON.parse(JSON.stringify(DEF))}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){alert('Stockage impossible : exporte tes données.')}}
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const eur=n=>(n<0?'−':'')+Math.abs(n).toFixed(2).replace('.',',')+' €';
+const pct=n=>(n>=0?'+':'−')+Math.abs(n*100).toFixed(1).replace('.',',')+' %';
+const cls=n=>n>0?'pos':n<0?'neg':'';
+const today=()=>{const d=new Date();return new Date(d-d.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
+
+function profit(b){if(b.res==='w')return b.stake*(b.odds-1);if(b.res==='l')return -b.stake;return 0}
+function edge(b){return b.prob?(b.prob/100)*b.odds-1:null}
+function filtered(){return S.bets.filter(b=>mode==='all'||b.mode===mode)}
+function settled(a){return a.filter(b=>b.res==='w'||b.res==='l')}
+
+function weekStart(dstr){const d=new Date(dstr+'T12:00:00');const w=(d.getDay()+6)%7;d.setDate(d.getDate()-w);return d.toISOString().slice(0,10)}
+
+/* ---------- Règlement automatique (scores lus dans results.json) ---------- */
+const COMP={'Ligue 1':'FL1','Premier League':'PL','La Liga':'PD','Serie A':'SA','Bundesliga':'BL1'};
+let RES=null;
+let syncMsg='';
+const STOP=new Set(['fc','afc','as','ac','sc','rc','ssc','us','og','ogc','cf','sv','vfb','vfl','fsv','tsg','de','du','la','le','fk','sco']);
+function norm(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9 ]+/g,' ').split(/\s+/).filter(w=>w&&!STOP.has(w)).join(' ')}
+function teamIs(t,name,id){if(id&&t.id===id)return true;const n=norm(name);return !!n&&[t.name,t.shortName,t.tla].some(x=>norm(x)===n)}
+function splitMatch(s){const p=String(s||'').split(/\s+(?:-|–|—|vs\.?|v)\s+/i);return p.length===2?[p[0].trim(),p[1].trim()]:['','']}
+function evalMarket(mk,h,a){
+  const t=h+a;
+  switch(mk){
+    case '1N2 - Domicile':return h>a;
+    case '1N2 - Nul':return h===a;
+    case '1N2 - Extérieur':return a>h;
+    case '+2,5 buts':return t>2.5;
+    case '-2,5 buts':return t<2.5;
+    case 'BTTS Oui':return h>0&&a>0;
+    case 'BTTS Non':return !(h>0&&a>0);
+  }
+  return null;
+}
+const dayDiff=(a,b)=>Math.abs((new Date(a+'T12:00:00Z')-new Date(b+'T12:00:00Z'))/864e5);
+const fmtDate=s=>s?new Date(s).toLocaleString('fr-FR'):'?';
+async function loadResults(){
+  let r;
+  try{r=await fetch('results.json?t='+Date.now(),{cache:'no-store'})}
+  catch(e){throw new Error('Impossible de charger les scores (hors ligne ?).')}
+  if(r.status===404)throw new Error('results.json introuvable : la tâche GitHub n\'a pas encore tourné (onglet Actions du repo).');
+  if(!r.ok)throw new Error('Erreur '+r.status+' en chargeant les scores.');
+  try{RES=await r.json()}catch(e){throw new Error('results.json illisible.')}
+  return RES;
+}
+function compOf(champ){return (RES&&RES.competitions&&RES.competitions[COMP[champ]])||{}}
+function findTeam(champ,name){return (compOf(champ).teams||[]).find(t=>teamIs(t,name,0))||null}
+function fillTeams(){
+  const champ=$('f_champ').value,code=COMP[champ],ts=compOf(champ).teams||[];
+  $('teamsDL').innerHTML=ts.map(t=>`<option value="${esc(t.shortName||t.name)}" label="${esc(t.name)}"></option>`).join('');
+  $('teamHint').textContent=!code?'Championnat « Autre » : règlement manuel.':ts.length?'Choisis les équipes dans la liste pour un règlement automatique fiable.':'Liste des équipes indisponible (scores pas encore chargés).';
+}
+async function refreshTeams(){
+  fillTeams();
+  if(!RES){try{await loadResults();fillTeams()}catch(e){$('teamHint').textContent=e.message}}
+}
+function pickMatch(b,matches){
+  let best=null,bd=9;
+  for(const m of matches){
+    if(!teamIs(m.homeTeam||{},b.home,b.hid)||!teamIs(m.awayTeam||{},b.away,b.aid))continue;
+    const d=dayDiff(String(m.utcDate).slice(0,10),b.date);
+    if(d<=1&&d<bd){best=m;bd=d}
+  }
+  return best;
+}
+function report(lines){const r=$('syncReport');r.innerHTML=lines.join('');r.style.display=lines.length?'block':'none'}
+async function syncResults(silent){
+  const td=today();
+  const pend=S.bets.filter(b=>b.res==='p'&&b.date<=td);
+  if(!pend.length){if(!silent)report(['<div>Aucun pari en attente à régler.</div>']);return 0}
+  try{await loadResults()}catch(e){if(!silent)report([`<div class="neg">${esc(e.message)}</div>`]);return 0}
+  fillTeams();
+  const lines=[`<div style="color:var(--mut)">Scores du ${esc(fmtDate(RES.updated))}</div>`];
+  let changed=0;
+  for(const b of pend){
+    if(!b.home||!b.away){const sp=splitMatch(b.match);b.home=b.home||sp[0];b.away=b.away||sp[1]}
+    const code=COMP[b.champ];
+    if(!code||!b.home||!b.away){lines.push(`<div>${esc(b.match)} : à régler à la main (championnat ou équipes non reconnus).</div>`);continue}
+    const m=pickMatch(b,(compOf(b.champ).matches)||[]);
+    if(!m){lines.push(`<div class="warnc">${esc(b.match)} : match introuvable (trop ancien, ou équipes à choisir dans la liste).</div>`);continue}
+    if(m.status==='FINISHED'){
+      const ft=(m.score&&m.score.fullTime)||{};
+      if(ft.home==null||ft.away==null){lines.push(`<div class="warnc">${esc(b.match)} : score indisponible, règle-le à la main.</div>`);continue}
+      b.score=ft.home+'-'+ft.away;b.auto=true;
+      const w=evalMarket(b.market,ft.home,ft.away);
+      if(w===null){lines.push(`<div class="warnc">${esc(b.match)} ${b.score} : marché « ${esc(b.market)} » à régler à la main.</div>`);continue}
+      b.res=w?'w':'l';changed++;
+      lines.push(`<div class="${w?'pos':'neg'}">${esc(b.match)} ${b.score} → ${w?'gagné':'perdu'} (${esc(b.market)})</div>`);
+    }else if(['POSTPONED','SUSPENDED','CANCELLED','AWARDED'].includes(m.status)){
+      lines.push(`<div class="warnc">${esc(b.match)} : statut ${esc(m.status)}, règle-le à la main (Annulé si remboursé).</div>`);
+    }else{
+      lines.push(`<div>${esc(b.match)} : pas encore terminé (ou score pas encore publié).</div>`);
+    }
+  }
+  S.settings.lastSync=Date.now();
+  syncMsg=changed?`🔄 ${changed} pari(s) réglé(s) automatiquement (détails dans Liste).`:'';
+  save();renderAll();
+  if(!silent||changed)report(lines);
+  return changed;
+}
+
+/* ---------- Stats ---------- */
+function renderStats(){
+  const a=filtered(),st=settled(a);
+  const pf=a.reduce((s,b)=>s+profit(b),0);
+  const staked=st.reduce((s,b)=>s+b.stake,0);
+  const wins=st.filter(b=>b.res==='w').length;
+  const roi=staked?pf/staked:0;
+  const bank=S.settings.bank+pf;
+  const clvs=a.filter(b=>b.close&&b.close>1).map(b=>b.odds/b.close-1);
+  const clv=clvs.length?clvs.reduce((x,y)=>x+y,0)/clvs.length:null;
+  const edges=a.map(edge).filter(e=>e!==null);
+  const avgEdge=edges.length?edges.reduce((x,y)=>x+y,0)/edges.length:null;
+  const pending=a.filter(b=>b.res==='p').length;
+  const maxStake=bank*S.settings.maxPct/100;
+
+  const k=[
+    ['Bankroll',eur(bank),cls(pf)],
+    ['Profit',eur(pf),cls(pf)],
+    ['ROI (yield)',staked?pct(roi):'—',staked?cls(roi):''],
+    ['Réussite',st.length?(wins/st.length*100).toFixed(0)+' % ('+wins+'/'+st.length+')':'—',''],
+    ['CLV moyen',clv===null?'—':pct(clv),clv===null?'':cls(clv)],
+    ['Edge estimé moy.',avgEdge===null?'—':pct(avgEdge),''],
+    ['En attente',pending,''],
+    ['Mise max actuelle',eur(maxStake),'']
+  ];
+  $('kpis').innerHTML=k.map(x=>`<div class="stat"><div class="l">${x[0]}</div><div class="v ${x[2]}">${x[1]}</div></div>`).join('');
+
+  // alerts
+  const al=[];
+  const ws=weekStart(today());
+  const wk=a.filter(b=>weekStart(b.date)>=ws&&(b.res==='w'||b.res==='l'));
+  const wpf=wk.reduce((s,b)=>s+profit(b),0);
+  const limit=S.settings.bank*S.settings.stopPct/100;
+  if(wpf<=-limit&&limit>0)al.push(`<div class="alert ko">🛑 <b>Stop-loss atteint</b> : ${eur(wpf)} cette semaine (limite −${eur(limit).replace('−','')}). Aucun nouveau pari jusqu'à lundi.</div>`);
+  else if(wpf<0&&limit>0&&-wpf>=limit*0.7)al.push(`<div class="alert warn">⚠️ Perte de la semaine : ${eur(wpf)}, proche du stop-loss (−${eur(limit).replace('−','')}).</div>`);
+  if(st.length<50)al.push(`<div class="alert warn">📉 Échantillon trop petit (${st.length} paris réglés) : ROI et réussite ne sont pas significatifs avant ~100 paris.</div>`);
+  if(syncMsg)al.unshift(`<div class="alert ok">${syncMsg}</div>`);
+  $('alerts').innerHTML=al.join('');
+
+  // chart
+  const sorted=[...a].filter(b=>b.res==='w'||b.res==='l').sort((x,y)=>x.date.localeCompare(y.date)||x.ts-y.ts);
+  let cur=S.settings.bank;const pts=[cur];sorted.forEach(b=>{cur+=profit(b);pts.push(cur)});
+  $('chart').innerHTML=pts.length<2?'<div class="empty">Aucun pari réglé pour le moment.</div>':spark(pts);
+
+  // by market
+  const m={};st.forEach(b=>{const g=b.market.split(' - ')[0].replace(/ (Oui|Non)$/,'');(m[g]=m[g]||{n:0,s:0,p:0,w:0});m[g].n++;m[g].s+=b.stake;m[g].p+=profit(b);if(b.res==='w')m[g].w++});
+  const keys=Object.keys(m);
+  $('byMarket').innerHTML=keys.length?keys.map(g=>`<div class="bet"><div class="top"><span class="m">${esc(g)}</span><span class="${cls(m[g].p)}">${eur(m[g].p)}</span></div><div class="s">${m[g].n} paris · réussite ${(m[g].w/m[g].n*100).toFixed(0)} % · ROI ${m[g].s?pct(m[g].p/m[g].s):'—'}</div></div>`).join(''):'<div class="empty">—</div>';
+}
+function spark(p){
+  const W=640,H=200,pad=28;const mn=Math.min(...p),mx=Math.max(...p);const r=(mx-mn)||1;
+  const x=i=>pad+(W-2*pad)*i/(p.length-1),y=v=>H-pad-(H-2*pad)*(v-mn)/r;
+  const d=p.map((v,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1)).join(' ');
+  const base=y(S.settings.bank);const up=p[p.length-1]>=S.settings.bank;
+  const col=up?'#2ecc71':'#e74c3c';
+  return `<svg viewBox="0 0 ${W} ${H}"><line x1="${pad}" x2="${W-pad}" y1="${base}" y2="${base}" stroke="#2a3541" stroke-dasharray="4 4"/><path d="${d}" fill="none" stroke="${col}" stroke-width="2.5" stroke-linejoin="round"/><text x="${pad}" y="14" fill="#8b98a5" font-size="12">${mx.toFixed(0)} €</text><text x="${pad}" y="${H-6}" fill="#8b98a5" font-size="12">${mn.toFixed(0)} €</text></svg>`;
+}
+
+/* ---------- Liste ---------- */
+function renderList(){
+  $('syncInfo').textContent=S.settings.lastSync?'Dernière synchro : '+new Date(S.settings.lastSync).toLocaleString('fr-FR'):'';
+  const a=[...filtered()].sort((x,y)=>y.date.localeCompare(x.date)||y.ts-x.ts);
+  if(!a.length){$('listBox').innerHTML='<div class="empty">Aucun pari. Ajoute-en un via l\'onglet ➕.</div>';return}
+  $('listBox').innerHTML=a.map(b=>{
+    const e=edge(b),pf=profit(b);
+    const badge={w:'<span class="badge w">Gagné</span>',l:'<span class="badge l">Perdu</span>',p:'<span class="badge p">En attente</span>',v:'<span class="badge">Annulé</span>'}[b.res];
+    const clv=b.close?b.odds/b.close-1:null;
+    return `<div class="bet"><div class="top"><div><span class="m">${esc(b.match)}</span>${badge}<span class="badge">${b.mode==='reel'?'Réel':'À blanc'}</span></div><div class="${cls(pf)}">${b.res==='p'?'':eur(pf)}</div></div>
+    <div class="s">${esc(b.date)} · ${esc(b.champ)} · ${esc(b.market)} @ ${b.odds.toFixed(2).replace('.',',')} · mise ${eur(b.stake)}${e!==null?' · edge '+pct(e):''}${clv!==null?' · CLV '+pct(clv):''}${b.score?' · score '+esc(b.score)+(b.auto?' (auto)':''):''}${b.note?' · '+esc(b.note):''}</div>
+    <div class="acts">${b.res==='p'?`<button class="btn sm" style="background:var(--ok)" onclick="setRes('${b.id}','w')">Gagné</button><button class="btn sm" style="background:var(--ko)" onclick="setRes('${b.id}','l')">Perdu</button><button class="btn sm sec" onclick="setRes('${b.id}','v')">Annulé</button>`:''}
+    <button class="btn sm sec" onclick="editBet('${b.id}')">Modifier</button><button class="btn sm sec" onclick="delBet('${b.id}')">Suppr.</button></div></div>`}).join('');
+}
+function setRes(id,r){const b=S.bets.find(x=>x.id===id);if(b){b.res=r;save();renderAll()}}
+function delBet(id){if(confirm('Supprimer ce pari ?')){S.bets=S.bets.filter(x=>x.id!==id);save();renderAll()}}
+function editBet(id){
+  const b=S.bets.find(x=>x.id===id);if(!b)return;
+  $('f_id').value=b.id;$('f_date').value=b.date;$('f_mode').value=b.mode;$('f_champ').value=b.champ;const sp=b.home?[b.home,b.away]:splitMatch(b.match);$('f_home').value=sp[0]||b.match;$('f_away').value=sp[1]||'';
+  $('f_market').value=b.market;$('f_odds').value=b.odds;$('f_stake').value=b.stake;$('f_prob').value=b.prob||'';$('f_close').value=b.close||'';
+  $('f_res').value=b.res;$('f_note').value=b.note||'';
+  $('formTitle').textContent='Modifier le pari';$('cancelBtn').style.display='block';calcHint();refreshTeams();showTab('add');
+}
+function resetForm(){
+  ['f_id','f_home','f_away','f_odds','f_stake','f_prob','f_close','f_note'].forEach(i=>$(i).value='');
+  $('f_date').value=today();$('f_res').value='p';$('formTitle').textContent='Nouveau pari';$('cancelBtn').style.display='none';calcHint();
+}
+function calcHint(){
+  const o=parseFloat($('f_odds').value),p=parseFloat($('f_prob').value);
+  if(!o||!p){$('calcHint').textContent='Renseigne cote et proba pour voir l\'edge et la mise suggérée.';return}
+  const e=(p/100)*o-1;
+  const bank=S.settings.bank+S.bets.filter(b=>b.mode===$('f_mode').value).reduce((s,b)=>s+profit(b),0);
+  const cap=bank*S.settings.maxPct/100;
+  let kelly=e>0?(e/(o-1))/4*bank:0;const sug=Math.min(kelly,cap);
+  const imp=1/o;
+  $('calcHint').innerHTML=`Proba implicite (marge incluse) : ${(imp*100).toFixed(1)} % · Edge : <b class="${cls(e)}">${pct(e)}</b> · `+(e<=0.05?'<b class="neg">edge &lt; 5 % : à éviter</b>':`Mise suggérée (Kelly ¼, plafonnée) : <b>${eur(sug)}</b>`);
+}
+$('saveBtn').onclick=()=>{
+  const o=parseFloat($('f_odds').value),s=parseFloat($('f_stake').value),h0=$('f_home').value.trim(),a0=$('f_away').value.trim();
+  if(!h0||!a0||!(o>1)||!(s>=0)||!$('f_date').value){alert('Date, deux équipes, cote (>1) et mise sont obligatoires.');return}
+  const p=parseFloat($('f_prob').value),c=parseFloat($('f_close').value);
+  const ch=$('f_champ').value,ht=findTeam(ch,h0),at=findTeam(ch,a0);
+  const hn=ht?(ht.shortName||ht.name):h0,an=at?(at.shortName||at.name):a0;
+  const data={date:$('f_date').value,mode:$('f_mode').value,champ:ch,match:hn+' - '+an,home:hn,away:an,hid:ht?ht.id:null,aid:at?at.id:null,market:$('f_market').value,odds:o,stake:s,prob:p>0?p:null,close:c>1?c:null,res:$('f_res').value,note:$('f_note').value.trim()};
+  const id=$('f_id').value;
+  if(id){const b=S.bets.find(x=>x.id===id);Object.assign(b,data)}
+  else S.bets.push({id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),ts:Date.now(),...data});
+  save();resetForm();renderAll();showTab('list');
+};
+$('cancelBtn').onclick=()=>{resetForm();showTab('list')};
+['f_odds','f_prob','f_mode'].forEach(i=>$(i).addEventListener('input',calcHint));
+$('f_champ').addEventListener('change',refreshTeams);
+
+/* ---------- Réglages / CSV ---------- */
+function renderSettings(){$('s_bank').value=S.settings.bank;$('s_max').value=S.settings.maxPct;$('s_stop').value=S.settings.stopPct;$('s_auto').checked=!!S.settings.autoSync}
+$('s_save').onclick=()=>{
+  const b=parseFloat($('s_bank').value),m=parseFloat($('s_max').value),s=parseFloat($('s_stop').value);
+  if(!(b>0)||!(m>0)||!(s>0)){alert('Valeurs invalides.');return}
+  S.settings={...S.settings,bank:b,maxPct:m,stopPct:s};save();renderAll();alert('Enregistré.');
+};
+const RES_OUT={w:'gagné',l:'perdu',p:'en attente',v:'annulé'};
+const RES_IN={'gagné':'w','gagne':'w','w':'w','win':'w','perdu':'l','l':'l','loss':'l','annulé':'v','annule':'v','v':'v','void':'v'};
+function csvCell(v){v=String(v??'');return /[;"\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
+$('expBtn').onclick=()=>{
+  const head='date;match;marché;cote;mise;proba_estimée;edge;résultat;cote_clôture;championnat;mode;note';
+  const rows=S.bets.map(b=>{const e=edge(b);return[b.date,b.match,b.market,b.odds,b.stake,b.prob??'',e===null?'':(e*100).toFixed(1),RES_OUT[b.res],b.close??'',b.champ,b.mode,b.note||''].map(csvCell).join(';')});
+  const blob=new Blob(['\ufeff'+[head,...rows].join('\n')],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='paris_'+today()+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+};
+function parseCSV(t){
+  const rows=[];let r=[],c='',q=false;t=t.replace(/^\ufeff/,'');
+  for(let i=0;i<t.length;i++){const ch=t[i];
+    if(q){if(ch==='"'){if(t[i+1]==='"'){c+='"';i++}else q=false}else c+=ch}
+    else if(ch==='"')q=true;else if(ch===';'){r.push(c);c=''}
+    else if(ch==='\n'||ch==='\r'){if(ch==='\r'&&t[i+1]==='\n')i++;r.push(c);c='';if(r.some(x=>x!==''))rows.push(r);r=[]}
+    else c+=ch}
+  r.push(c);if(r.some(x=>x!==''))rows.push(r);return rows;
+}
+const num=v=>{const n=parseFloat(String(v).replace(',','.'));return isFinite(n)?n:null};
+$('impFile').onchange=e=>{
+  const f=e.target.files[0];if(!f)return;
+  const rd=new FileReader();
+  rd.onload=()=>{
+    const rows=parseCSV(rd.result);if(rows.length&&/date/i.test(rows[0][0]))rows.shift();
+    let n=0;
+    rows.forEach(c=>{
+      const odds=num(c[3]),stake=num(c[4]);
+      if(!c[0]||!c[1]||!(odds>1)||stake===null)return;
+      S.bets.push({id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),ts:Date.now()+n,date:c[0].trim(),match:c[1],home:splitMatch(c[1])[0]||null,away:splitMatch(c[1])[1]||null,market:c[2]||'Autre',odds,stake,prob:num(c[5]),res:RES_IN[(c[7]||'').trim().toLowerCase()]||'p',close:(num(c[8])>1?num(c[8]):null),champ:c[9]||'Autre',mode:c[10]==='reel'?'reel':'blanc',note:c[11]||''});
+      n++;
+    });
+    save();renderAll();e.target.value='';alert(n+' pari(s) importé(s).');
+  };
+  rd.readAsText(f);
+};
+$('resetBtn').onclick=()=>{if(confirm('Effacer TOUS les paris et réglages ?')&&confirm('Vraiment ? Pense à exporter avant.')){S=JSON.parse(JSON.stringify(DEF));save();resetForm();renderAll()}};
+
+/* ---------- Navigation ---------- */
+function showTab(t){
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x.id==='tab-'+t));
+  document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x.dataset.t===t));
+  window.scrollTo(0,0);
+}
+$('nav').onclick=e=>{const b=e.target.closest('button');if(b)showTab(b.dataset.t)};
+$('modeSeg').onclick=e=>{const b=e.target.closest('button');if(!b)return;mode=b.dataset.m;document.querySelectorAll('#modeSeg button').forEach(x=>x.classList.toggle('on',x===b));renderAll()};
+function renderAll(){renderStats();renderList();renderSettings();calcHint()}
+
+$('syncBtn').onclick=async()=>{
+  const b=$('syncBtn');b.disabled=true;b.textContent='Synchronisation…';
+  try{await syncResults(false)}finally{b.disabled=false;b.textContent='🔄 Régler les paris terminés'}
+};
+$('s_tok_save').onclick=()=>{S.settings.autoSync=$('s_auto').checked;save();$('s_tok_msg').textContent='Enregistré.'};
+$('s_tok_test').onclick=async()=>{
+  const msg=$('s_tok_msg');msg.textContent='Chargement…';
+  try{
+    const d=await loadResults();
+    const n=Object.values(d.competitions||{}).reduce((s,c)=>s+((c.matches||[]).length),0);
+    fillTeams();msg.innerHTML='<span class="ok">OK : '+n+' matchs, scores du '+esc(fmtDate(d.updated))+'.</span>';
+  }catch(e){msg.innerHTML='<span class="neg">'+esc(e.message)+'</span>'}
+};
+resetForm();renderAll();
+refreshTeams();
+if(S.settings.autoSync&&S.bets.some(b=>b.res==='p'&&b.date<=today()))syncResults(true).catch(()=>{});
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body>
+</html>
