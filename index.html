@@ -136,12 +136,10 @@ h2{font-size:15px;margin:0 0 8px}
   </div>
   <div class="card">
     <h2>Règlement automatique</h2>
-    <label>Clé API football-data.org (gratuite)</label>
-    <input id="s_token" type="password" placeholder="Colle ta clé ici" autocomplete="off">
     <label style="display:flex;gap:8px;align-items:center;color:var(--txt);font-size:14px"><input type="checkbox" id="s_auto" style="width:auto"> Régler automatiquement à l'ouverture de l'app</label>
-    <button class="btn" id="s_tok_save">Enregistrer la clé</button>
-    <button class="btn sec" id="s_tok_test">Tester la connexion</button>
-    <div class="hint" id="s_tok_msg">Crée un compte gratuit sur football-data.org : la clé arrive par email. Elle reste uniquement dans ce navigateur. Couvre Ligue 1, Premier League, La Liga, Serie A et Bundesliga (10 requêtes/min).</div>
+    <button class="btn" id="s_tok_save">Enregistrer</button>
+    <button class="btn sec" id="s_tok_test">Recharger les scores</button>
+    <div class="hint" id="s_tok_msg">Les scores viennent du fichier results.json, mis à jour toutes les 3 h par une tâche GitHub (données football-data.org).</div>
   </div>
   <div class="card">
     <h2>Données</h2>
@@ -163,8 +161,8 @@ h2{font-size:15px;margin:0 0 8px}
 
 <script>
 const KEY='paris_tracker_v1';
-const DEF={settings:{bank:200,maxPct:2,stopPct:10,token:'',autoSync:true,lastSync:0},bets:[]};
-let S=load();let mode='all';
+const DEF={settings:{bank:200,maxPct:2,stopPct:10,autoSync:true,lastSync:0},bets:[]};
+let S=load();let mode='all';delete S.settings.token;
 
 function load(){try{const d=JSON.parse(localStorage.getItem(KEY));if(d&&d.bets)return{settings:{...DEF.settings,...d.settings},bets:d.bets}}catch(e){}return JSON.parse(JSON.stringify(DEF))}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){alert('Stockage impossible : exporte tes données.')}}
@@ -182,17 +180,13 @@ function settled(a){return a.filter(b=>b.res==='w'||b.res==='l')}
 
 function weekStart(dstr){const d=new Date(dstr+'T12:00:00');const w=(d.getDay()+6)%7;d.setDate(d.getDate()-w);return d.toISOString().slice(0,10)}
 
-/* ---------- Règlement automatique (football-data.org) ---------- */
-const API='https://api.football-data.org/v4';
+/* ---------- Règlement automatique (scores lus dans results.json) ---------- */
 const COMP={'Ligue 1':'FL1','Premier League':'PL','La Liga':'PD','Serie A':'SA','Bundesliga':'BL1'};
-const TKEY='paris_teams_v1';
-let T={};try{T=JSON.parse(localStorage.getItem(TKEY))||{}}catch(e){}
+let RES=null;
 let syncMsg='';
-const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const STOP=new Set(['fc','afc','as','ac','sc','rc','ssc','us','og','ogc','cf','sv','vfb','vfl','fsv','tsg','de','du','la','le','fk','sco']);
 function norm(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9 ]+/g,' ').split(/\s+/).filter(w=>w&&!STOP.has(w)).join(' ')}
 function teamIs(t,name,id){if(id&&t.id===id)return true;const n=norm(name);return !!n&&[t.name,t.shortName,t.tla].some(x=>norm(x)===n)}
-function findTeam(champ,name){const ts=(T[COMP[champ]]||{}).teams||[];return ts.find(t=>teamIs(t,name,0))||null}
 function splitMatch(s){const p=String(s||'').split(/\s+(?:-|–|—|vs\.?|v)\s+/i);return p.length===2?[p[0].trim(),p[1].trim()]:['','']}
 function evalMarket(mk,h,a){
   const t=h+a;
@@ -207,33 +201,27 @@ function evalMarket(mk,h,a){
   }
   return null;
 }
-const addDays=(d,n)=>{const x=new Date(d+'T12:00:00Z');x.setUTCDate(x.getUTCDate()+n);return x.toISOString().slice(0,10)};
 const dayDiff=(a,b)=>Math.abs((new Date(a+'T12:00:00Z')-new Date(b+'T12:00:00Z'))/864e5);
-async function api(path,tok){
+const fmtDate=s=>s?new Date(s).toLocaleString('fr-FR'):'?';
+async function loadResults(){
   let r;
-  try{r=await fetch(API+path,{headers:{'X-Auth-Token':tok||S.settings.token}})}
-  catch(e){throw new Error('Connexion impossible (réseau coupé ou accès bloqué par le navigateur).')}
-  if(r.status===429)throw new Error('Limite atteinte (10 requêtes/min). Réessaie dans une minute.');
-  if(r.status===401||r.status===403)throw new Error('Clé refusée, ou compétition non incluse dans ton offre.');
-  if(!r.ok)throw new Error('Erreur API '+r.status+'.');
-  return r.json();
+  try{r=await fetch('results.json?t='+Date.now(),{cache:'no-store'})}
+  catch(e){throw new Error('Impossible de charger les scores (hors ligne ?).')}
+  if(r.status===404)throw new Error('results.json introuvable : la tâche GitHub n\'a pas encore tourné (onglet Actions du repo).');
+  if(!r.ok)throw new Error('Erreur '+r.status+' en chargeant les scores.');
+  try{RES=await r.json()}catch(e){throw new Error('results.json illisible.')}
+  return RES;
 }
-async function ensureTeams(champ){
-  const code=COMP[champ];if(!code||!S.settings.token)return;
-  const c=T[code];if(c&&Date.now()-c.ts<30*864e5)return;
-  const d=await api('/competitions/'+code+'/teams');
-  T[code]={ts:Date.now(),teams:(d.teams||[]).map(t=>({id:t.id,name:t.name,shortName:t.shortName,tla:t.tla}))};
-  try{localStorage.setItem(TKEY,JSON.stringify(T))}catch(e){}
-}
+function compOf(champ){return (RES&&RES.competitions&&RES.competitions[COMP[champ]])||{}}
+function findTeam(champ,name){return (compOf(champ).teams||[]).find(t=>teamIs(t,name,0))||null}
 function fillTeams(){
-  const champ=$('f_champ').value,code=COMP[champ];
-  const ts=(T[code]||{}).teams||[];
+  const champ=$('f_champ').value,code=COMP[champ],ts=compOf(champ).teams||[];
   $('teamsDL').innerHTML=ts.map(t=>`<option value="${esc(t.shortName||t.name)}" label="${esc(t.name)}"></option>`).join('');
-  $('teamHint').textContent=!code?'Championnat « Autre » : règlement manuel.':!S.settings.token?'Ajoute ta clé API (Réglages) pour avoir la liste des équipes et le règlement automatique.':ts.length?'Choisis les équipes dans la liste pour un règlement automatique fiable.':'';
+  $('teamHint').textContent=!code?'Championnat « Autre » : règlement manuel.':ts.length?'Choisis les équipes dans la liste pour un règlement automatique fiable.':'Liste des équipes indisponible (scores pas encore chargés).';
 }
 async function refreshTeams(){
   fillTeams();
-  try{await ensureTeams($('f_champ').value);fillTeams()}catch(e){$('teamHint').textContent=e.message}
+  if(!RES){try{await loadResults();fillTeams()}catch(e){$('teamHint').textContent=e.message}}
 }
 function pickMatch(b,matches){
   let best=null,bd=9;
@@ -246,49 +234,34 @@ function pickMatch(b,matches){
 }
 function report(lines){const r=$('syncReport');r.innerHTML=lines.join('');r.style.display=lines.length?'block':'none'}
 async function syncResults(silent){
-  const s=S.settings;
-  if(!s.token){if(!silent)report(['<div class="warnc">Ajoute ta clé API dans Réglages.</div>']);return 0}
   const td=today();
   const pend=S.bets.filter(b=>b.res==='p'&&b.date<=td);
   if(!pend.length){if(!silent)report(['<div>Aucun pari en attente à régler.</div>']);return 0}
-  const lines=[];let changed=0,n=0;const byComp={};
-  const get=async p=>{if(++n>8)await sleep(6500);return api(p)};
+  try{await loadResults()}catch(e){if(!silent)report([`<div class="neg">${esc(e.message)}</div>`]);return 0}
+  fillTeams();
+  const lines=[`<div style="color:var(--mut)">Scores du ${esc(fmtDate(RES.updated))}</div>`];
+  let changed=0;
   for(const b of pend){
     if(!b.home||!b.away){const sp=splitMatch(b.match);b.home=b.home||sp[0];b.away=b.away||sp[1]}
     const code=COMP[b.champ];
     if(!code||!b.home||!b.away){lines.push(`<div>${esc(b.match)} : à régler à la main (championnat ou équipes non reconnus).</div>`);continue}
-    (byComp[code]=byComp[code]||[]).push(b);
-  }
-  try{
-    for(const code of Object.keys(byComp)){
-      const bets=byComp[code];
-      const dates=bets.map(b=>b.date).sort();
-      const end=addDays(dates[dates.length-1],1);
-      const matches=[];
-      for(let from=addDays(dates[0],-1);from<=end;from=addDays(from,10)){
-        const d=await get(`/competitions/${code}/matches?dateFrom=${from}&dateTo=${addDays(from,9)}`);
-        matches.push(...(d.matches||[]));
-      }
-      for(const b of bets){
-        const m=pickMatch(b,matches);
-        if(!m){lines.push(`<div class="warnc">${esc(b.match)} : match introuvable (choisis les équipes dans la liste).</div>`);continue}
-        if(m.status==='FINISHED'){
-          const ft=(m.score&&m.score.fullTime)||{};
-          if(ft.home==null||ft.away==null){lines.push(`<div class="warnc">${esc(b.match)} : score indisponible, règle-le à la main.</div>`);continue}
-          b.score=ft.home+'-'+ft.away;b.auto=true;
-          const w=evalMarket(b.market,ft.home,ft.away);
-          if(w===null){lines.push(`<div class="warnc">${esc(b.match)} ${b.score} : marché « ${esc(b.market)} » à régler à la main.</div>`);continue}
-          b.res=w?'w':'l';changed++;
-          lines.push(`<div class="${w?'pos':'neg'}">${esc(b.match)} ${b.score} → ${w?'gagné':'perdu'} (${esc(b.market)})</div>`);
-        }else if(['POSTPONED','SUSPENDED','CANCELLED','AWARDED'].includes(m.status)){
-          lines.push(`<div class="warnc">${esc(b.match)} : statut ${esc(m.status)}, règle-le à la main (Annulé si remboursé).</div>`);
-        }else{
-          lines.push(`<div>${esc(b.match)} : pas encore terminé.</div>`);
-        }
-      }
+    const m=pickMatch(b,(compOf(b.champ).matches)||[]);
+    if(!m){lines.push(`<div class="warnc">${esc(b.match)} : match introuvable (trop ancien, ou équipes à choisir dans la liste).</div>`);continue}
+    if(m.status==='FINISHED'){
+      const ft=(m.score&&m.score.fullTime)||{};
+      if(ft.home==null||ft.away==null){lines.push(`<div class="warnc">${esc(b.match)} : score indisponible, règle-le à la main.</div>`);continue}
+      b.score=ft.home+'-'+ft.away;b.auto=true;
+      const w=evalMarket(b.market,ft.home,ft.away);
+      if(w===null){lines.push(`<div class="warnc">${esc(b.match)} ${b.score} : marché « ${esc(b.market)} » à régler à la main.</div>`);continue}
+      b.res=w?'w':'l';changed++;
+      lines.push(`<div class="${w?'pos':'neg'}">${esc(b.match)} ${b.score} → ${w?'gagné':'perdu'} (${esc(b.market)})</div>`);
+    }else if(['POSTPONED','SUSPENDED','CANCELLED','AWARDED'].includes(m.status)){
+      lines.push(`<div class="warnc">${esc(b.match)} : statut ${esc(m.status)}, règle-le à la main (Annulé si remboursé).</div>`);
+    }else{
+      lines.push(`<div>${esc(b.match)} : pas encore terminé (ou score pas encore publié).</div>`);
     }
-    s.lastSync=Date.now();
-  }catch(e){lines.push(`<div class="neg">${esc(e.message)}</div>`)}
+  }
+  S.settings.lastSync=Date.now();
   syncMsg=changed?`🔄 ${changed} pari(s) réglé(s) automatiquement (détails dans Liste).`:'';
   save();renderAll();
   if(!silent||changed)report(lines);
@@ -407,7 +380,7 @@ $('cancelBtn').onclick=()=>{resetForm();showTab('list')};
 $('f_champ').addEventListener('change',refreshTeams);
 
 /* ---------- Réglages / CSV ---------- */
-function renderSettings(){$('s_bank').value=S.settings.bank;$('s_max').value=S.settings.maxPct;$('s_stop').value=S.settings.stopPct;$('s_token').value=S.settings.token||'';$('s_auto').checked=!!S.settings.autoSync}
+function renderSettings(){$('s_bank').value=S.settings.bank;$('s_max').value=S.settings.maxPct;$('s_stop').value=S.settings.stopPct;$('s_auto').checked=!!S.settings.autoSync}
 $('s_save').onclick=()=>{
   const b=parseFloat($('s_bank').value),m=parseFloat($('s_max').value),s=parseFloat($('s_stop').value);
   if(!(b>0)||!(m>0)||!(s>0)){alert('Valeurs invalides.');return}
@@ -464,22 +437,18 @@ $('syncBtn').onclick=async()=>{
   const b=$('syncBtn');b.disabled=true;b.textContent='Synchronisation…';
   try{await syncResults(false)}finally{b.disabled=false;b.textContent='🔄 Régler les paris terminés'}
 };
-$('s_tok_save').onclick=()=>{
-  S.settings.token=$('s_token').value.trim();S.settings.autoSync=$('s_auto').checked;save();
-  $('s_tok_msg').textContent=S.settings.token?'Clé enregistrée.':'Clé supprimée.';refreshTeams();
-};
+$('s_tok_save').onclick=()=>{S.settings.autoSync=$('s_auto').checked;save();$('s_tok_msg').textContent='Enregistré.'};
 $('s_tok_test').onclick=async()=>{
-  const msg=$('s_tok_msg'),tok=$('s_token').value.trim();
-  if(!tok){msg.textContent='Colle d\'abord ta clé.';return}
-  msg.textContent='Test en cours…';
-  try{const d=await api('/competitions/FL1',tok);msg.innerHTML='<span class="ok">Connexion OK ('+esc(d.name||'Ligue 1')+').</span> Pense à enregistrer la clé.'}
-  catch(e){msg.innerHTML='<span class="neg">'+esc(e.message)+'</span>'}
+  const msg=$('s_tok_msg');msg.textContent='Chargement…';
+  try{
+    const d=await loadResults();
+    const n=Object.values(d.competitions||{}).reduce((s,c)=>s+((c.matches||[]).length),0);
+    fillTeams();msg.innerHTML='<span class="ok">OK : '+n+' matchs, scores du '+esc(fmtDate(d.updated))+'.</span>';
+  }catch(e){msg.innerHTML='<span class="neg">'+esc(e.message)+'</span>'}
 };
 resetForm();renderAll();
-if(S.settings.token){
-  refreshTeams();
-  if(S.settings.autoSync&&Date.now()-(S.settings.lastSync||0)>36e5&&S.bets.some(b=>b.res==='p'&&b.date<=today()))syncResults(true).catch(()=>{});
-}else fillTeams();
+refreshTeams();
+if(S.settings.autoSync&&S.bets.some(b=>b.res==='p'&&b.date<=today()))syncResults(true).catch(()=>{});
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body>
