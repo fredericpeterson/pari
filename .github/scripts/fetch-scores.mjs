@@ -59,7 +59,34 @@ for (const code of COMPS) {
   }
 }
 
+// Mise en forme lisible : une équipe ou un match par ligne, matchs triés par date.
+function format(r) {
+  const row = o => '      ' + JSON.stringify(o);
+  const comps = Object.keys(r.competitions).sort().map(code => {
+    const c = r.competitions[code];
+    const teams = [...(c.teams || [])].sort((a, b) => String(a.name).localeCompare(String(b.name)));
+    const matches = [...(c.matches || [])].sort((a, b) => String(a.utcDate).localeCompare(String(b.utcDate)));
+    return `    ${JSON.stringify(code)}: {\n      "teams": [\n${teams.map(x => '  ' + row(x)).join(',\n')}\n      ],\n      "matches": [\n${matches.map(x => '  ' + row(x)).join(',\n')}\n      ]\n    }`;
+  });
+  return `{\n  "updated": ${JSON.stringify(r.updated)},\n  "competitions": {\n${comps.join(',\n')}\n  }\n}\n`;
+}
+
 if (!okCount) { console.error('Aucune compétition récupérée.'); process.exit(1); }
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
-fs.writeFileSync(OUT, JSON.stringify(result));
+fs.writeFileSync(OUT, format(result));
+// Version lisible par un humain, à côté de results.json (non utilisée par l'app).
+const NAMES = { FL1: 'Ligue 1', PL: 'Premier League', PD: 'La Liga', SA: 'Serie A', BL1: 'Bundesliga' };
+const STATUS = { FINISHED: 'terminé', SCHEDULED: 'à venir', TIMED: 'à venir', IN_PLAY: 'en cours', PAUSED: 'mi-temps', POSTPONED: 'reporté', SUSPENDED: 'suspendu', CANCELLED: 'annulé', AWARDED: 'décidé sur tapis vert' };
+const nm = t => t.shortName || t.name;
+const txt = [`Scores mis à jour le ${result.updated}`, ''];
+for (const code of Object.keys(result.competitions).sort()) {
+  const ms = [...(result.competitions[code].matches || [])].sort((a, b) => String(a.utcDate).localeCompare(String(b.utcDate)));
+  txt.push(`== ${NAMES[code] || code} (${ms.length} matchs) ==`);
+  for (const m of ms) {
+    const f = m.score.fullTime, s = f.home != null && f.away != null ? `${f.home}-${f.away}` : 'vs';
+    txt.push(`${m.utcDate.slice(0, 10)}  ${nm(m.homeTeam)} ${s} ${nm(m.awayTeam)}  (${STATUS[m.status] || m.status})`);
+  }
+  txt.push('');
+}
+fs.writeFileSync(path.join(path.dirname(OUT), 'scores.txt'), txt.join('\n'));
 console.log('Écrit', OUT);
