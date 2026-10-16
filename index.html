@@ -81,6 +81,11 @@ h2{font-size:15px;margin:0 0 8px}
 
 <section class="tab" id="tab-add">
   <div class="card">
+    <h2>Matchs à venir</h2>
+    <div id="todayList"><div class="empty">Chargement…</div></div>
+    <div class="hint">Touche « Parier » pour pré-remplir le formulaire ci-dessous. Liste mise à jour par la tâche GitHub (toutes les 3 h).</div>
+  </div>
+  <div class="card">
     <h2 id="formTitle">Nouveau pari</h2>
     <input type="hidden" id="f_id">
     <div class="grid">
@@ -214,7 +219,45 @@ async function loadResults(){
 }
 function compOf(champ){return (RES&&RES.competitions&&RES.competitions[COMP[champ]])||{}}
 function findTeam(champ,name){return (compOf(champ).teams||[]).find(t=>teamIs(t,name,0))||null}
-function fillTeams(){
+const CHAMP_BY_CODE={FL1:'Ligue 1',PL:'Premier League',PD:'La Liga',SA:'Serie A',BL1:'Bundesliga'};
+const localDay=d=>d.toLocaleDateString('sv-SE');
+function upcoming(){
+  const out=[],since=Date.now()-2*36e5;
+  if(!RES)return out;
+  for(const code of Object.keys(RES.competitions||{}))for(const m of (RES.competitions[code].matches||[])){
+    if(!['SCHEDULED','TIMED','IN_PLAY','PAUSED'].includes(m.status))continue;
+    if(new Date(m.utcDate).getTime()<since)continue;
+    out.push({code,m});
+  }
+  return out.sort((x,y)=>String(x.m.utcDate).localeCompare(String(y.m.utcDate)));
+}
+function renderToday(){
+  const box=$('todayList');if(!box)return;
+  if(!RES){box.innerHTML='<div class="empty">Scores pas encore chargés (voir Réglages).</div>';return}
+  const list=upcoming().slice(0,16);
+  if(!list.length){box.innerHTML='<div class="empty">Aucun match à venir dans results.json.</div>';return}
+  const td=localDay(new Date());let day='';
+  box.innerHTML=list.map(({code,m})=>{
+    const d=new Date(m.utcDate),ld=localDay(d);
+    let head='';
+    if(ld!==day){day=ld;head=`<div class="hint" style="margin-top:8px;font-weight:600">${ld===td?'Aujourd\'hui':esc(d.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}))}</div>`}
+    const h=m.homeTeam.shortName||m.homeTeam.name,a=m.awayTeam.shortName||m.awayTeam.name;
+    const done=S.bets.some(b=>b.hid===m.homeTeam.id&&b.aid===m.awayTeam.id&&b.date===ld);
+    return head+`<div class="bet"><div class="top"><div><span class="m">${esc(h)} – ${esc(a)}</span><div class="s">${d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})} · ${esc(CHAMP_BY_CODE[code]||code)}${done?' · <span class="ok">déjà saisi</span>':''}</div></div><button class="btn sm" onclick="pickMatchBet('${code}',${m.id})">Parier</button></div></div>`;
+  }).join('');
+}
+function pickMatchBet(code,id){
+  const hit=upcoming().find(x=>x.code===code&&x.m.id===id);if(!hit)return;
+  const m=hit.m;
+  $('f_id').value='';$('formTitle').textContent='Nouveau pari';$('cancelBtn').style.display='none';
+  $('f_champ').value=CHAMP_BY_CODE[code]||'Autre';
+  $('f_date').value=localDay(new Date(m.utcDate));
+  $('f_home').value=m.homeTeam.shortName||m.homeTeam.name;
+  $('f_away').value=m.awayTeam.shortName||m.awayTeam.name;
+  fillTeams();calcHint();
+  try{$('f_market').scrollIntoView({behavior:'smooth',block:'center'})}catch(e){}
+}
+function fillTeams(){renderToday();
   const champ=$('f_champ').value,code=COMP[champ],ts=compOf(champ).teams||[];
   $('teamsDL').innerHTML=ts.map(t=>`<option value="${esc(t.shortName||t.name)}" label="${esc(t.name)}"></option>`).join('');
   $('teamHint').textContent=!code?'Championnat « Autre » : règlement manuel.':ts.length?'Choisis les équipes dans la liste pour un règlement automatique fiable.':'Liste des équipes indisponible (scores pas encore chargés).';
@@ -431,7 +474,7 @@ function showTab(t){
 }
 $('nav').onclick=e=>{const b=e.target.closest('button');if(b)showTab(b.dataset.t)};
 $('modeSeg').onclick=e=>{const b=e.target.closest('button');if(!b)return;mode=b.dataset.m;document.querySelectorAll('#modeSeg button').forEach(x=>x.classList.toggle('on',x===b));renderAll()};
-function renderAll(){renderStats();renderList();renderSettings();calcHint()}
+function renderAll(){renderStats();renderList();renderSettings();calcHint();renderToday()}
 
 $('syncBtn').onclick=async()=>{
   const b=$('syncBtn');b.disabled=true;b.textContent='Synchronisation…';
