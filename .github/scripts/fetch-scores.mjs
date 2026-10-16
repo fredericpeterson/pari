@@ -31,8 +31,8 @@ try { old = JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch {}
 const result = { updated: new Date().toISOString(), competitions: { ...(old.competitions || {}) } };
 
 const today = new Date();
-// 2 fenêtres de 10 jours (limite de l'API) : de J-19 à aujourd'hui
-const windows = [[addDays(today, -19), addDays(today, -10)], [addDays(today, -9), today]];
+// Fenêtres de 10 jours max (limite de l'API) : de J-19 à J+7 (scores passés + matchs à venir)
+const windows = [[addDays(today, -19), addDays(today, -10)], [addDays(today, -9), today], [addDays(today, 1), addDays(today, 7)]];
 let okCount = 0;
 
 for (const code of COMPS) {
