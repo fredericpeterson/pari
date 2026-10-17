@@ -1,0 +1,40 @@
+name: Cotes football
+
+on:
+  schedule:
+    # 3 passages par jour (heures UTC) : début d'après-midi, avant les matchs de 15h-17h, avant ceux de 20h45 (Paris, été)
+    # Coût : 2 crédits par championnat et par passage (4 crédits/passage pour 2 championnats, ~360 crédits/mois sur 500).
+    - cron: '30 11 * * *'
+    - cron: '0 14 * * *'
+    - cron: '45 17 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: odds
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Récupérer les cotes
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          # Championnats suivis (clé The Odds API:code football-data.org). Pour changer le 2e :
+          #   soccer_spain_la_liga:PD · soccer_italy_serie_a:SA · soccer_germany_bundesliga:BL1
+          ODDS_SPORTS: soccer_france_ligue_one:FL1,soccer_epl:PL
+        run: node .github/scripts/fetch-odds.mjs
+      - name: Publier odds.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add odds.json
+          git diff --cached --quiet || (git commit -m "cotes: mise à jour automatique" && git pull --rebase origin main && git push)
