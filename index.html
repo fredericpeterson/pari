@@ -73,13 +73,25 @@ h2{font-size:15px;margin:0 0 8px}
     <div id="chart"></div>
   </div>
   <div class="card">
-    <h2>Par marché</h2>
+    <h2>CLV cumulé</h2>
+    <div id="clvChart"></div>
+    <div class="hint" id="clvNote"></div>
+  </div>
+  <div class="card">
+    <h2>Détail</h2>
+    <select id="groupBy" style="margin-bottom:6px"><option value="market">Par marché</option><option value="champ">Par championnat</option><option value="op">Par opérateur</option></select>
     <div id="byMarket"></div>
   </div>
   <div class="hint">CLV = cote prise / cote de clôture − 1. Un CLV moyen positif sur 100+ paris est le meilleur signe d'un vrai avantage.</div>
 </section>
 
 <section class="tab" id="tab-add">
+  <div class="card">
+    <h2>Value du jour</h2>
+    <select id="valMin" style="margin-bottom:6px"><option value="0.02">Edge ≥ 2 %</option><option value="0.03" selected>Edge ≥ 3 %</option><option value="0.05">Edge ≥ 5 %</option></select>
+    <div id="valueList"><div class="empty">Chargement…</div></div>
+    <div class="hint">Edge = proba Pinnacle sans marge (estimation prudente : la plus basse de deux méthodes) × meilleure cote opérateur − 1. Un edge très élevé (&gt; 10 %) vient souvent d'une cote périmée : vérifie chez l'opérateur avant de miser. Pas une garantie de gain.</div>
+  </div>
   <div class="card">
     <h2>Matchs à venir</h2>
     <select id="todayFilter" style="margin-bottom:6px"><option value="all">Tous les championnats</option><option value="FL1">Ligue 1</option><option value="PL">Premier League</option><option value="PD">La Liga</option><option value="SA">Serie A</option><option value="BL1">Bundesliga</option></select>
@@ -151,6 +163,10 @@ h2{font-size:15px;margin:0 0 8px}
   </div>
   <div class="card">
     <h2>Données</h2>
+    <button class="btn" id="bkBtn" style="margin-top:0">💾 Sauvegarde complète (JSON)</button>
+    <label style="margin-top:12px">Restaurer une sauvegarde (.json)</label>
+    <input type="file" id="bkFile" accept=".json,application/json">
+    <div class="hint" id="bkInfo"></div>
     <button class="btn sec" id="expBtn">Exporter en CSV</button>
     <label style="margin-top:12px">Importer un CSV (séparateur ;)</label>
     <input type="file" id="impFile" accept=".csv,text/csv,text/plain">
@@ -238,10 +254,19 @@ function oddsFor(matchId,market){
   const list=OP.map(b=>({book:b,odds:oddOf((en.books||{})[b],market)})).filter(x=>x.odds).sort((a,b)=>b.odds-a.odds);
   return {list,best:list[0]||null,pin:oddOf((en.books||{}).pinnacle,market),entry:en};
 }
+// Retrait de la marge, version prudente : minimum entre la répartition proportionnelle et la méthode « puissance »
+// (p_i = (1/cote_i)^k, somme = 1, qui corrige le biais favori-outsider). On retient la proba la plus basse, donc l'edge le plus bas.
+function devig(odds,idx){
+  const inv=odds.map(x=>1/x),sum=a=>a.reduce((x,y)=>x+y,0),prop=inv[idx]/sum(inv);
+  if(sum(inv)<=1)return prop;
+  let lo=1,hi=20;
+  for(let i=0;i<60;i++){const k=(lo+hi)/2;if(sum(inv.map(v=>Math.pow(v,k)))>1)lo=k;else hi=k}
+  return Math.min(prop,Math.pow(inv[idx],(lo+hi)/2));
+}
 function pinProb(en,market){
   const e=(en.books||{}).pinnacle,k=MK_IDX[market];if(!e||!k)return null;
-  if(k[0]==='h2h'&&e.h2h){const inv=e.h2h.map(x=>1/x),s=inv.reduce((a,b)=>a+b,0);return inv[k[1]]/s}
-  if((k[0]==='o25'||k[0]==='u25')&&e.o25&&e.u25){const a=1/e.o25,b=1/e.u25;return (k[0]==='o25'?a:b)/(a+b)}
+  if(k[0]==='h2h'&&e.h2h)return devig(e.h2h,k[1]);
+  if((k[0]==='o25'||k[0]==='u25')&&e.o25&&e.u25)return devig([e.o25,e.u25],k[0]==='o25'?0:1);
   return null;
 }
 function oddsLine(matchId){
@@ -292,6 +317,7 @@ function upcoming(){
   return out.sort((x,y)=>String(x.m.utcDate).localeCompare(String(y.m.utcDate)));
 }
 function renderToday(){
+  renderValue();
   const box=$('todayList');if(!box)return;updateOddsInfo();
   if(!RES){box.innerHTML='<div class="empty">Scores pas encore chargés (voir Réglages).</div>';return}
   const flt=$('todayFilter')?$('todayFilter').value:'all';
@@ -307,6 +333,35 @@ function renderToday(){
     return head+`<div class="bet"><div class="top"><div><span class="m">${esc(h)} – ${esc(a)}</span><div class="s">${d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})} · ${esc(CHAMP_BY_CODE[code]||code)}${done?' · <span class="ok">déjà saisi</span>':''}</div>${oddsLine(m.id)}</div><button class="btn sm" onclick="pickMatchBet('${code}',${m.id})">Parier</button></div></div>`;
   }).join('');
 }
+
+function renderValue(){
+  const box=$('valueList');if(!box)return;
+  if(!RES||!ODDS){box.innerHTML='<div class="empty">Cotes indisponibles (lance la tâche « Cotes football »).</div>';return}
+  const min=parseFloat($('valMin').value)||0.03,now=Date.now(),rows=[];
+  for(const {code,m} of upcoming()){
+    if(new Date(m.utcDate).getTime()<=now)continue;
+    for(const mk of Object.keys(MK_IDX)){
+      const o=oddsFor(m.id,mk);if(!o||!o.best)continue;
+      const pp=pinProb(o.entry,mk);if(pp==null)continue;
+      const e=pp*o.best.odds-1;
+      if(e>=min)rows.push({code,m,mk,pp,e,best:o.best});
+    }
+  }
+  rows.sort((x,y)=>y.e-x.e);
+  if(!rows.length){box.innerHTML='<div class="empty">Aucun pari ne dépasse ce seuil pour l\'instant. C\'est le cas le plus courant : ne force pas.</div>';return}
+  box.innerHTML=rows.slice(0,10).map(r=>{
+    const d=new Date(r.m.utcDate),h=r.m.homeTeam.shortName||r.m.homeTeam.name,a=r.m.awayTeam.shortName||r.m.awayTeam.name;
+    return `<div class="bet"><div class="top"><div><span class="m">${esc(h)} – ${esc(a)}</span><div class="s">${esc(r.mk)} · ${esc(BOOK_NAMES[r.best.book])} <b>${fmtO(r.best.odds)}</b> · proba Pinnacle ${(r.pp*100).toFixed(1).replace('.',',')} % · edge <b class="${r.e>0.1?'warnc':'ok'}">${(r.e*100).toFixed(1).replace('.',',')} %</b>${r.e>0.1?' ⚠ à revérifier':''}</div><div class="s">${esc(d.toLocaleDateString('fr-FR',{weekday:'short',day:'numeric',month:'short'}))} ${d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})} · ${esc(CHAMP_BY_CODE[r.code]||r.code)}</div></div><button class="btn sm" onclick="pickValue('${r.code}',${r.m.id},'${r.mk.replace(/'/g,"\\'")}')">Parier</button></div></div>`;
+  }).join('');
+}
+function pickValue(code,id,mk){
+  pickMatchBet(code,id);
+  $('f_market').value=mk;oddsAuto=true;$('f_odds').value='';
+  const o=oddsFor(id,mk),pp=o&&pinProb(o.entry,mk);
+  if(pp!=null)$('f_prob').value=(pp*100).toFixed(1);
+  updateOddsHint(true);calcHint();
+}
+$('valMin').addEventListener('change',renderValue);
 function pickMatchBet(code,id){
   const hit=upcoming().find(x=>x.code===code&&x.m.id===id);if(!hit)return;
   const m=hit.m;
@@ -410,6 +465,7 @@ function renderStats(){
   if(wpf<=-limit&&limit>0)al.push(`<div class="alert ko">🛑 <b>Stop-loss atteint</b> : ${eur(wpf)} cette semaine (limite −${eur(limit).replace('−','')}). Aucun nouveau pari jusqu'à lundi.</div>`);
   else if(wpf<0&&limit>0&&-wpf>=limit*0.7)al.push(`<div class="alert warn">⚠️ Perte de la semaine : ${eur(wpf)}, proche du stop-loss (−${eur(limit).replace('−','')}).</div>`);
   if(st.length<50)al.push(`<div class="alert warn">📉 Échantillon trop petit (${st.length} paris réglés) : ROI et réussite ne sont pas significatifs avant ~100 paris.</div>`);
+  if(S.bets.length>=5&&(!S.settings.lastBackup||Date.now()-S.settings.lastBackup>30*864e5))al.push('<div class="alert warn">💾 Pas de sauvegarde depuis plus de 30 jours : Réglages &gt; Données &gt; Sauvegarde complète.</div>');
   if(syncMsg)al.unshift(`<div class="alert ok">${syncMsg}</div>`);
   $('alerts').innerHTML=al.join('');
 
@@ -418,10 +474,34 @@ function renderStats(){
   let cur=S.settings.bank;const pts=[cur];sorted.forEach(b=>{cur+=profit(b);pts.push(cur)});
   $('chart').innerHTML=pts.length<2?'<div class="empty">Aucun pari réglé pour le moment.</div>':spark(pts);
 
-  // by market
-  const m={};st.forEach(b=>{const g=b.market.split(' - ')[0].replace(/ (Oui|Non)$/,'');(m[g]=m[g]||{n:0,s:0,p:0,w:0});m[g].n++;m[g].s+=b.stake;m[g].p+=profit(b);if(b.res==='w')m[g].w++});
-  const keys=Object.keys(m);
-  $('byMarket').innerHTML=keys.length?keys.map(g=>`<div class="bet"><div class="top"><span class="m">${esc(g)}</span><span class="${cls(m[g].p)}">${eur(m[g].p)}</span></div><div class="s">${m[g].n} paris · réussite ${(m[g].w/m[g].n*100).toFixed(0)} % · ROI ${m[g].s?pct(m[g].p/m[g].s):'—'}</div></div>`).join(''):'<div class="empty">—</div>';
+  // CLV cumulé
+  const cb=a.filter(b=>b.close&&b.close>1).sort((x,y)=>x.date.localeCompare(y.date)||x.ts-y.ts);
+  let cs=0;const cpts=cb.map((b,i)=>{cs+=b.odds/b.close-1;return cs/(i+1)*100});
+  $('clvChart').innerHTML=cpts.length<2?'<div class="empty">Il faut au moins 2 paris avec une cote de clôture.</div>':clvSpark(cpts);
+  const nC=cb.length;
+  $('clvNote').innerHTML=!nC?'Aucun pari avec cote de clôture : elle est remplie automatiquement pour les matchs suivis par odds.json.'
+    :`CLV moyen sur <b>${nC}</b> paris : <b class="${cls(cs)}">${pct(cs/nC)}</b>. `+(nC<100?`Échantillon trop petit (${nC}/100 minimum) : ne conclus rien.`:cs/nC>0.01?'Signe d\'un avantage réel sur le marché.':cs/nC>0?'Légèrement positif : à confirmer sur plus de paris.':'Négatif : ta méthode ne bat pas le marché pour l\'instant.');
+
+  // détail par marché / championnat / opérateur
+  const OPS=['Winamax','Betclic','Unibet','PMU','Parions'];
+  const keyOf=b=>{const g=$('groupBy')?$('groupBy').value:'market';
+    if(g==='champ')return b.champ||'Autre';
+    if(g==='op')return OPS.find(o=>new RegExp(o,'i').test(b.note||''))||'Non précisé';
+    return b.market.split(' - ')[0].replace(/ (Oui|Non)$/,'')};
+  const m={};
+  a.forEach(b=>{const g=keyOf(b);const o=(m[g]=m[g]||{n:0,s:0,p:0,w:0,c:0,cs:0});
+    if(b.res==='w'||b.res==='l'){o.n++;o.s+=b.stake;o.p+=profit(b);if(b.res==='w')o.w++}
+    if(b.close&&b.close>1){o.c++;o.cs+=b.odds/b.close-1}});
+  const keys=Object.keys(m).filter(g=>m[g].n||m[g].c).sort((x,y)=>(m[y].n+m[y].c)-(m[x].n+m[x].c));
+  $('byMarket').innerHTML=keys.length?keys.map(g=>{const o=m[g];
+    return `<div class="bet"><div class="top"><span class="m">${esc(g)}</span><span class="${cls(o.p)}">${eur(o.p)}</span></div><div class="s">${o.n} pari${o.n>1?"s":""} réglé${o.n>1?"s":""} · réussite ${o.n?(o.w/o.n*100).toFixed(0)+' %':'—'} · ROI ${o.s?pct(o.p/o.s):'—'} · CLV ${o.c?pct(o.cs/o.c)+' ('+o.c+')':'—'}${o.n<30?' · <span class="warnc">échantillon faible</span>':''}</div></div>`}).join(''):'<div class="empty">—</div>';
+}
+function clvSpark(p){
+  const W=640,H=200,pad=28;const mn=Math.min(0,...p),mx=Math.max(0,...p);const r=(mx-mn)||1;
+  const x=i=>pad+(W-2*pad)*i/(p.length-1),y=v=>H-pad-(H-2*pad)*(v-mn)/r;
+  const d=p.map((v,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1)).join(' ');
+  const col=p[p.length-1]>=0?'#2ecc71':'#e74c3c',z=y(0);
+  return `<svg viewBox="0 0 ${W} ${H}"><line x1="${pad}" x2="${W-pad}" y1="${z}" y2="${z}" stroke="#2a3541" stroke-dasharray="4 4"/><path d="${d}" fill="none" stroke="${col}" stroke-width="2.5" stroke-linejoin="round"/><text x="${pad}" y="14" fill="#8b98a5" font-size="12">${mx.toFixed(1)} %</text><text x="${pad}" y="${H-6}" fill="#8b98a5" font-size="12">${mn.toFixed(1)} %</text><text x="${W-pad}" y="${z-4}" fill="#8b98a5" font-size="12" text-anchor="end">0 %</text></svg>`;
 }
 function spark(p){
   const W=640,H=200,pad=28;const mn=Math.min(...p),mx=Math.max(...p);const r=(mx-mn)||1;
@@ -531,6 +611,32 @@ $('impFile').onchange=e=>{
   };
   rd.readAsText(f);
 };
+
+/* ---------- Sauvegarde JSON ---------- */
+function bkInfo(){
+  const el=$('bkInfo');if(!el)return;
+  const t=S.settings.lastBackup;
+  el.textContent=(t?'Dernière sauvegarde : '+new Date(t).toLocaleDateString('fr-FR')+'. ':'Aucune sauvegarde faite. ')+'Elle contient tous les paris et réglages : garde-la dans ton Drive ou envoie-la-toi par mail.';
+}
+$('bkBtn').onclick=()=>{
+  const data={app:'paris-tracker',version:1,exported:new Date().toISOString(),settings:S.settings,bets:S.bets};
+  const blob=new Blob([JSON.stringify(data,null,1)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='paris-tracker-sauvegarde-'+today()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+  S.settings.lastBackup=Date.now();save();renderAll();
+};
+$('bkFile').onchange=async e=>{
+  const f=e.target.files[0];if(!f)return;
+  try{
+    const d=JSON.parse((await f.text()).replace(/^\ufeff/,''));
+    if(!d||d.app!=='paris-tracker'||!Array.isArray(d.bets))throw new Error('Ce fichier n\'est pas une sauvegarde Paris Tracker.');
+    const bad=d.bets.findIndex(b=>!b||typeof b.id!=='string'||!(b.odds>1)||!(b.stake>=0)||!b.date||!b.market);
+    if(bad>=0)throw new Error('Pari n°'+(bad+1)+' invalide : sauvegarde refusée, rien n\'a été modifié.');
+    if(!confirm('Remplacer les '+S.bets.length+' paris actuels par les '+d.bets.length+' de la sauvegarde ?'))return;
+    S={settings:{...DEF.settings,...(d.settings||{}),lastBackup:Date.now()},bets:d.bets};delete S.settings.token;
+    save();resetForm();renderAll();alert('Sauvegarde restaurée : '+d.bets.length+' paris.');
+  }catch(err){alert(err.message||'Fichier illisible.')}
+  e.target.value='';
+};
 $('resetBtn').onclick=()=>{if(confirm('Effacer TOUS les paris et réglages ?')&&confirm('Vraiment ? Pense à exporter avant.')){S=JSON.parse(JSON.stringify(DEF));save();resetForm();renderAll()}};
 
 /* ---------- Navigation ---------- */
@@ -541,7 +647,8 @@ function showTab(t){
 }
 $('nav').onclick=e=>{const b=e.target.closest('button');if(b)showTab(b.dataset.t)};
 $('modeSeg').onclick=e=>{const b=e.target.closest('button');if(!b)return;mode=b.dataset.m;document.querySelectorAll('#modeSeg button').forEach(x=>x.classList.toggle('on',x===b));renderAll()};
-function renderAll(){renderStats();renderList();renderSettings();calcHint();renderToday()}
+$('groupBy').addEventListener('change',renderStats);
+function renderAll(){bkInfo();renderStats();renderList();renderSettings();calcHint();renderToday()}
 
 $('syncBtn').onclick=async()=>{
   const b=$('syncBtn');b.disabled=true;b.textContent='Synchronisation…';
