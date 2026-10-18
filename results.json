@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T04:23:15.840Z",
+  "updated": "2026-10-18T10:57:48.436Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -253,7 +253,7 @@
         {"id":558575,"utcDate":"2026-10-17T13:00:00Z","status":"FINISHED","homeTeam":{"id":454,"name":"Venezia FC","shortName":"Venezia FC","tla":"VEN"},"awayTeam":{"id":113,"name":"SSC Napoli","shortName":"Napoli","tla":"NAP"},"score":{"fullTime":{"home":1,"away":0}}},
         {"id":558571,"utcDate":"2026-10-17T16:00:00Z","status":"FINISHED","homeTeam":{"id":103,"name":"Bologna FC 1909","shortName":"Bologna","tla":"BOL"},"awayTeam":{"id":108,"name":"FC Internazionale Milano","shortName":"Inter","tla":"INT"},"score":{"fullTime":{"home":1,"away":3}}},
         {"id":558572,"utcDate":"2026-10-17T18:45:00Z","status":"FINISHED","homeTeam":{"id":100,"name":"AS Roma","shortName":"Roma","tla":"ROM"},"awayTeam":{"id":107,"name":"Genoa CFC","shortName":"Genoa","tla":"GEN"},"score":{"fullTime":{"home":2,"away":0}}},
-        {"id":558574,"utcDate":"2026-10-18T10:30:00Z","status":"TIMED","homeTeam":{"id":115,"name":"Udinese Calcio","shortName":"Udinese","tla":"UDI"},"awayTeam":{"id":5890,"name":"US Lecce","shortName":"Lecce","tla":"USL"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":558574,"utcDate":"2026-10-18T10:30:00Z","status":"IN_PLAY","homeTeam":{"id":115,"name":"Udinese Calcio","shortName":"Udinese","tla":"UDI"},"awayTeam":{"id":5890,"name":"US Lecce","shortName":"Lecce","tla":"USL"},"score":{"fullTime":{"home":0,"away":1}}},
         {"id":558577,"utcDate":"2026-10-18T13:00:00Z","status":"TIMED","homeTeam":{"id":99,"name":"ACF Fiorentina","shortName":"Fiorentina","tla":"FIO"},"awayTeam":{"id":7397,"name":"Como 1907","shortName":"Como 1907","tla":"COM"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":558569,"utcDate":"2026-10-18T16:00:00Z","status":"TIMED","homeTeam":{"id":98,"name":"AC Milan","shortName":"Milan","tla":"MIL"},"awayTeam":{"id":102,"name":"Atalanta BC","shortName":"Atalanta","tla":"ATA"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":558570,"utcDate":"2026-10-18T18:45:00Z","status":"TIMED","homeTeam":{"id":109,"name":"Juventus FC","shortName":"Juventus","tla":"JUV"},"awayTeam":{"id":110,"name":"SS Lazio","shortName":"Lazio","tla":"LAZ"},"score":{"fullTime":{"home":null,"away":null}}},
