@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-10-18T23:05:37.514Z
+Scores mis à jour le 2026-10-19T04:32:40.040Z
 
 == Bundesliga (27 matchs) ==
 2026-10-09  Dortmund 2-2 Bremen  (terminé)
@@ -58,7 +58,7 @@ Scores mis à jour le 2026-10-18T23:05:37.514Z
 2026-10-25  Auxerre vs Le Mans  (à venir)
 2026-10-25  PSG vs Olympique Lyon  (à venir)
 
-== La Liga (30 matchs) ==
+== La Liga (31 matchs) ==
 2026-10-09  Málaga 1-1 Espanyol  (terminé)
 2026-10-10  Rayo Vallecano 0-0 Athletic  (annulé)
 2026-10-10  Alavés 1-2 Atleti  (terminé)
@@ -89,6 +89,7 @@ Scores mis à jour le 2026-10-18T23:05:37.514Z
 2026-10-25  Celta vs Real Betis  (à venir)
 2026-10-25  Real Sociedad vs Levante  (à venir)
 2026-10-25  Barça vs Real Madrid  (à venir)
+2026-10-26  Sevilla FC vs Osasuna  (à venir)
 
 == Premier League (30 matchs) ==
 2026-10-10  Arsenal 2-1 Leeds United  (terminé)

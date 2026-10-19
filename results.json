@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T23:05:37.514Z",
+  "updated": "2026-10-19T04:32:40.040Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -156,7 +156,8 @@
         {"id":564720,"utcDate":"2026-10-25T13:00:00Z","status":"TIMED","homeTeam":{"id":77,"name":"Athletic Club","shortName":"Athletic","tla":"ATH"},"awayTeam":{"id":82,"name":"Getafe CF","shortName":"Getafe","tla":"GET"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":564725,"utcDate":"2026-10-25T15:15:00Z","status":"TIMED","homeTeam":{"id":558,"name":"RC Celta de Vigo","shortName":"Celta","tla":"CEL"},"awayTeam":{"id":90,"name":"Real Betis Balompié","shortName":"Real Betis","tla":"BET"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":564726,"utcDate":"2026-10-25T17:30:00Z","status":"TIMED","homeTeam":{"id":92,"name":"Real Sociedad de Fútbol","shortName":"Real Sociedad","tla":"RSO"},"awayTeam":{"id":88,"name":"Levante UD","shortName":"Levante","tla":"LEV"},"score":{"fullTime":{"home":null,"away":null}}},
-        {"id":564723,"utcDate":"2026-10-25T20:00:00Z","status":"TIMED","homeTeam":{"id":81,"name":"FC Barcelona","shortName":"Barça","tla":"FCB"},"awayTeam":{"id":86,"name":"Real Madrid CF","shortName":"Real Madrid","tla":"RMA"},"score":{"fullTime":{"home":null,"away":null}}}
+        {"id":564723,"utcDate":"2026-10-25T20:00:00Z","status":"TIMED","homeTeam":{"id":81,"name":"FC Barcelona","shortName":"Barça","tla":"FCB"},"awayTeam":{"id":86,"name":"Real Madrid CF","shortName":"Real Madrid","tla":"RMA"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":564721,"utcDate":"2026-10-26T20:00:00Z","status":"TIMED","homeTeam":{"id":559,"name":"Sevilla FC","shortName":"Sevilla FC","tla":"SEV"},"awayTeam":{"id":79,"name":"CA Osasuna","shortName":"Osasuna","tla":"OSA"},"score":{"fullTime":{"home":null,"away":null}}}
       ]
     },
     "PL": {
