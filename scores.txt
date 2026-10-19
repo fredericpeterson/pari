@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-10-19T13:00:54.230Z
+Scores mis à jour le 2026-10-19T20:33:49.961Z
 
 == Bundesliga (27 matchs) ==
 2026-10-09  Dortmund 2-2 Bremen  (terminé)
@@ -78,7 +78,7 @@ Scores mis à jour le 2026-10-19T13:00:54.230Z
 2026-10-18  Celta 2-1 Alavés  (terminé)
 2026-10-18  Málaga 2-5 Real Sociedad  (terminé)
 2026-10-18  Real Madrid 4-1 Sevilla FC  (terminé)
-2026-10-19  Getafe vs Rayo Vallecano  (à venir)
+2026-10-19  Getafe 1-1 Rayo Vallecano  (en cours)
 2026-10-21  Levante 0-0 Athletic  (à venir)
 2026-10-23  Alavés vs Málaga  (à venir)
 2026-10-24  Rayo Vallecano vs Elche  (à venir)
@@ -111,7 +111,7 @@ Scores mis à jour le 2026-10-19T13:00:54.230Z
 2026-10-18  Leeds United 1-1 Man United  (terminé)
 2026-10-18  Brighton Hove 5-0 Crystal Palace  (terminé)
 2026-10-18  Nottingham 0-1 Arsenal  (terminé)
-2026-10-19  Tottenham vs Coventry City  (à venir)
+2026-10-19  Tottenham 2-1 Coventry City  (en cours)
 2026-10-23  Ipswich Town vs Nottingham  (à venir)
 2026-10-24  Aston Villa vs Man City  (à venir)
 2026-10-24  Arsenal vs Everton  (à venir)
@@ -142,8 +142,8 @@ Scores mis à jour le 2026-10-19T13:00:54.230Z
 2026-10-18  Fiorentina 1-3 Como 1907  (terminé)
 2026-10-18  Milan 3-2 Atalanta  (terminé)
 2026-10-18  Juventus 0-3 Lazio  (terminé)
-2026-10-19  Monza vs Cagliari  (à venir)
-2026-10-19  Parma vs Torino  (à venir)
+2026-10-19  Monza 4-0 Cagliari  (terminé)
+2026-10-19  Parma 1-3 Torino  (en cours)
 2026-10-23  Torino vs Monza  (à venir)
 2026-10-24  Cagliari vs Bologna  (à venir)
 2026-10-24  Como 1907 vs Sassuolo  (à venir)
