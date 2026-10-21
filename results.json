@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T17:06:48.262Z",
+  "updated": "2026-10-21T21:36:14.734Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -147,7 +147,7 @@
         {"id":564714,"utcDate":"2026-10-18T16:30:00Z","status":"FINISHED","homeTeam":{"id":84,"name":"Málaga CF","shortName":"Málaga","tla":"MAL"},"awayTeam":{"id":92,"name":"Real Sociedad de Fútbol","shortName":"Real Sociedad","tla":"RSO"},"score":{"fullTime":{"home":2,"away":5}}},
         {"id":564709,"utcDate":"2026-10-18T19:00:00Z","status":"FINISHED","homeTeam":{"id":86,"name":"Real Madrid CF","shortName":"Real Madrid","tla":"RMA"},"awayTeam":{"id":559,"name":"Sevilla FC","shortName":"Sevilla FC","tla":"SEV"},"score":{"fullTime":{"home":4,"away":1}}},
         {"id":564717,"utcDate":"2026-10-19T19:00:00Z","status":"FINISHED","homeTeam":{"id":82,"name":"Getafe CF","shortName":"Getafe","tla":"GET"},"awayTeam":{"id":87,"name":"Rayo Vallecano de Madrid","shortName":"Rayo Vallecano","tla":"RAY"},"score":{"fullTime":{"home":1,"away":1}}},
-        {"id":564685,"utcDate":"2026-10-21T18:00:00Z","status":"TIMED","homeTeam":{"id":88,"name":"Levante UD","shortName":"Levante","tla":"LEV"},"awayTeam":{"id":77,"name":"Athletic Club","shortName":"Athletic","tla":"ATH"},"score":{"fullTime":{"home":0,"away":0}}},
+        {"id":564685,"utcDate":"2026-10-21T18:00:00Z","status":"FINISHED","homeTeam":{"id":88,"name":"Levante UD","shortName":"Levante","tla":"LEV"},"awayTeam":{"id":77,"name":"Athletic Club","shortName":"Athletic","tla":"ATH"},"score":{"fullTime":{"home":3,"away":1}}},
         {"id":564719,"utcDate":"2026-10-23T19:00:00Z","status":"TIMED","homeTeam":{"id":263,"name":"Deportivo Alavés","shortName":"Alavés","tla":"ALA"},"awayTeam":{"id":84,"name":"Málaga CF","shortName":"Málaga","tla":"MAL"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":564718,"utcDate":"2026-10-24T12:00:00Z","status":"TIMED","homeTeam":{"id":87,"name":"Rayo Vallecano de Madrid","shortName":"Rayo Vallecano","tla":"RAY"},"awayTeam":{"id":285,"name":"Elche CF","shortName":"Elche","tla":"ELC"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":564727,"utcDate":"2026-10-24T14:15:00Z","status":"TIMED","homeTeam":{"id":5335,"name":"Real Racing Club de Santander","shortName":"Santander","tla":"SAN"},"awayTeam":{"id":80,"name":"RCD Espanyol de Barcelona","shortName":"Espanyol","tla":"ESP"},"score":{"fullTime":{"home":null,"away":null}}},
