@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-10-20T23:50:16.555Z
+Scores mis à jour le 2026-10-21T04:37:23.192Z
 
 == Bundesliga (27 matchs) ==
 2026-10-09  Dortmund 2-2 Bremen  (terminé)
@@ -123,7 +123,7 @@ Scores mis à jour le 2026-10-20T23:50:16.555Z
 2026-10-25  Hull City vs Brentford  (à venir)
 2026-10-25  Sunderland vs Leeds United  (à venir)
 
-== Serie A (33 matchs) ==
+== Serie A (38 matchs) ==
 2026-10-10  Genoa 2-1 Fiorentina  (terminé)
 2026-10-10  Inter 3-0 Parma  (terminé)
 2026-10-10  Napoli 3-0 Frosinone  (terminé)
@@ -157,3 +157,8 @@ Scores mis à jour le 2026-10-20T23:50:16.555Z
 2026-10-27  Sassuolo vs Lazio  (à venir)
 2026-10-27  Roma vs Cagliari  (à venir)
 2026-10-27  Torino vs Como 1907  (à venir)
+2026-10-28  Milan vs Bologna  (à venir)
+2026-10-28  Venezia FC vs Inter  (à venir)
+2026-10-28  Parma vs Udinese  (à venir)
+2026-10-28  Genoa vs Juventus  (à venir)
+2026-10-28  Monza vs Napoli  (à venir)

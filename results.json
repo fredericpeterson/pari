@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T23:50:16.555Z",
+  "updated": "2026-10-21T04:37:23.192Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -272,7 +272,12 @@
         {"id":558559,"utcDate":"2026-10-25T19:45:00Z","status":"TIMED","homeTeam":{"id":115,"name":"Udinese Calcio","shortName":"Udinese","tla":"UDI"},"awayTeam":{"id":98,"name":"AC Milan","shortName":"Milan","tla":"MIL"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":558556,"utcDate":"2026-10-27T17:30:00Z","status":"TIMED","homeTeam":{"id":471,"name":"US Sassuolo Calcio","shortName":"Sassuolo","tla":"SAS"},"awayTeam":{"id":110,"name":"SS Lazio","shortName":"Lazio","tla":"LAZ"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":558555,"utcDate":"2026-10-27T19:45:00Z","status":"TIMED","homeTeam":{"id":100,"name":"AS Roma","shortName":"Roma","tla":"ROM"},"awayTeam":{"id":104,"name":"Cagliari Calcio","shortName":"Cagliari","tla":"CAG"},"score":{"fullTime":{"home":null,"away":null}}},
-        {"id":558557,"utcDate":"2026-10-27T19:45:00Z","status":"TIMED","homeTeam":{"id":586,"name":"Torino FC","shortName":"Torino","tla":"TOR"},"awayTeam":{"id":7397,"name":"Como 1907","shortName":"Como 1907","tla":"COM"},"score":{"fullTime":{"home":null,"away":null}}}
+        {"id":558557,"utcDate":"2026-10-27T19:45:00Z","status":"TIMED","homeTeam":{"id":586,"name":"Torino FC","shortName":"Torino","tla":"TOR"},"awayTeam":{"id":7397,"name":"Como 1907","shortName":"Como 1907","tla":"COM"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":558549,"utcDate":"2026-10-28T17:30:00Z","status":"TIMED","homeTeam":{"id":98,"name":"AC Milan","shortName":"Milan","tla":"MIL"},"awayTeam":{"id":103,"name":"Bologna FC 1909","shortName":"Bologna","tla":"BOL"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":558550,"utcDate":"2026-10-28T17:30:00Z","status":"TIMED","homeTeam":{"id":454,"name":"Venezia FC","shortName":"Venezia FC","tla":"VEN"},"awayTeam":{"id":108,"name":"FC Internazionale Milano","shortName":"Inter","tla":"INT"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":558553,"utcDate":"2026-10-28T17:30:00Z","status":"TIMED","homeTeam":{"id":112,"name":"Parma Calcio 1913","shortName":"Parma","tla":"PAR"},"awayTeam":{"id":115,"name":"Udinese Calcio","shortName":"Udinese","tla":"UDI"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":558552,"utcDate":"2026-10-28T19:45:00Z","status":"TIMED","homeTeam":{"id":107,"name":"Genoa CFC","shortName":"Genoa","tla":"GEN"},"awayTeam":{"id":109,"name":"Juventus FC","shortName":"Juventus","tla":"JUV"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":558554,"utcDate":"2026-10-28T19:45:00Z","status":"TIMED","homeTeam":{"id":5911,"name":"AC Monza","shortName":"Monza","tla":"MON"},"awayTeam":{"id":113,"name":"SSC Napoli","shortName":"Napoli","tla":"NAP"},"score":{"fullTime":{"home":null,"away":null}}}
       ]
     }
   }
