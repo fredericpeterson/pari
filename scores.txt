@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-10-21T11:41:12.831Z
+Scores mis à jour le 2026-10-21T17:06:48.262Z
 
 == Bundesliga (27 matchs) ==
 2026-10-09  Dortmund 2-2 Bremen  (terminé)
@@ -49,12 +49,12 @@ Scores mis à jour le 2026-10-21T11:41:12.831Z
 2026-10-18  Le Havre 1-3 Auxerre  (terminé)
 2026-10-18  Olympique Lyon 2-1 Nice  (terminé)
 2026-10-23  Brest vs Nice  (à venir)
-2026-10-24  Toulouse vs Troyes  (à venir)
 2026-10-24  RC Lens vs Paris FC  (à venir)
 2026-10-25  Monaco vs Lille  (à venir)
 2026-10-25  Marseille vs Le Havre  (à venir)
 2026-10-25  Stade Rennais vs Strasbourg  (à venir)
 2026-10-25  Angers SCO vs Lorient  (à venir)
+2026-10-25  Toulouse vs Troyes  (à venir)
 2026-10-25  Auxerre vs Le Mans  (à venir)
 2026-10-25  PSG vs Olympique Lyon  (à venir)
 

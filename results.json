@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T11:41:12.831Z",
+  "updated": "2026-10-21T17:06:48.262Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -93,12 +93,12 @@
         {"id":559663,"utcDate":"2026-10-18T15:15:00Z","status":"FINISHED","homeTeam":{"id":533,"name":"Le Havre AC","shortName":"Le Havre","tla":"HAC"},"awayTeam":{"id":519,"name":"AJ Auxerre","shortName":"Auxerre","tla":"AJA"},"score":{"fullTime":{"home":1,"away":3}}},
         {"id":559665,"utcDate":"2026-10-18T18:45:00Z","status":"FINISHED","homeTeam":{"id":523,"name":"Olympique Lyonnais","shortName":"Olympique Lyon","tla":"LYO"},"awayTeam":{"id":522,"name":"OGC Nice","shortName":"Nice","tla":"NIC"},"score":{"fullTime":{"home":2,"away":1}}},
         {"id":559654,"utcDate":"2026-10-23T18:45:00Z","status":"TIMED","homeTeam":{"id":512,"name":"Stade Brestois 29","shortName":"Brest","tla":"BRE"},"awayTeam":{"id":522,"name":"OGC Nice","shortName":"Nice","tla":"NIC"},"score":{"fullTime":{"home":null,"away":null}}},
-        {"id":559655,"utcDate":"2026-10-24T15:15:00Z","status":"TIMED","homeTeam":{"id":511,"name":"Toulouse FC","shortName":"Toulouse","tla":"TOU"},"awayTeam":{"id":531,"name":"ES Troyes AC","shortName":"Troyes","tla":"ETR"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559652,"utcDate":"2026-10-24T18:45:00Z","status":"TIMED","homeTeam":{"id":546,"name":"Racing Club de Lens","shortName":"RC Lens","tla":"RCL"},"awayTeam":{"id":1045,"name":"Paris FC","shortName":"Paris FC","tla":"PFC"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559650,"utcDate":"2026-10-25T14:00:00Z","status":"TIMED","homeTeam":{"id":548,"name":"AS Monaco FC","shortName":"Monaco","tla":"ASM"},"awayTeam":{"id":521,"name":"Lille OSC","shortName":"Lille","tla":"LIL"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559649,"utcDate":"2026-10-25T16:15:00Z","status":"TIMED","homeTeam":{"id":516,"name":"Olympique de Marseille","shortName":"Marseille","tla":"MAR"},"awayTeam":{"id":533,"name":"Le Havre AC","shortName":"Le Havre","tla":"HAC"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559651,"utcDate":"2026-10-25T16:15:00Z","status":"TIMED","homeTeam":{"id":529,"name":"Stade Rennais FC 1901","shortName":"Stade Rennais","tla":"REN"},"awayTeam":{"id":576,"name":"RC Strasbourg Alsace","shortName":"Strasbourg","tla":"RC "},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559653,"utcDate":"2026-10-25T16:15:00Z","status":"TIMED","homeTeam":{"id":532,"name":"Angers SCO","shortName":"Angers SCO","tla":"ANG"},"awayTeam":{"id":525,"name":"FC Lorient","shortName":"Lorient","tla":"FCL"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":559655,"utcDate":"2026-10-25T16:15:00Z","status":"TIMED","homeTeam":{"id":511,"name":"Toulouse FC","shortName":"Toulouse","tla":"TOU"},"awayTeam":{"id":531,"name":"ES Troyes AC","shortName":"Troyes","tla":"ETR"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559656,"utcDate":"2026-10-25T16:15:00Z","status":"TIMED","homeTeam":{"id":519,"name":"AJ Auxerre","shortName":"Auxerre","tla":"AJA"},"awayTeam":{"id":535,"name":"Le Mans FC","shortName":"Le Mans","tla":"LMF"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559648,"utcDate":"2026-10-25T19:45:00Z","status":"TIMED","homeTeam":{"id":524,"name":"Paris Saint-Germain FC","shortName":"PSG","tla":"PSG"},"awayTeam":{"id":523,"name":"Olympique Lyonnais","shortName":"Olympique Lyon","tla":"LYO"},"score":{"fullTime":{"home":null,"away":null}}}
       ]
