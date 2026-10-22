@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T21:36:14.734Z",
+  "updated": "2026-10-22T04:35:53.489Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -277,7 +277,9 @@
         {"id":558550,"utcDate":"2026-10-28T17:30:00Z","status":"TIMED","homeTeam":{"id":454,"name":"Venezia FC","shortName":"Venezia FC","tla":"VEN"},"awayTeam":{"id":108,"name":"FC Internazionale Milano","shortName":"Inter","tla":"INT"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":558553,"utcDate":"2026-10-28T17:30:00Z","status":"TIMED","homeTeam":{"id":112,"name":"Parma Calcio 1913","shortName":"Parma","tla":"PAR"},"awayTeam":{"id":115,"name":"Udinese Calcio","shortName":"Udinese","tla":"UDI"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":558552,"utcDate":"2026-10-28T19:45:00Z","status":"TIMED","homeTeam":{"id":107,"name":"Genoa CFC","shortName":"Genoa","tla":"GEN"},"awayTeam":{"id":109,"name":"Juventus FC","shortName":"Juventus","tla":"JUV"},"score":{"fullTime":{"home":null,"away":null}}},
-        {"id":558554,"utcDate":"2026-10-28T19:45:00Z","status":"TIMED","homeTeam":{"id":5911,"name":"AC Monza","shortName":"Monza","tla":"MON"},"awayTeam":{"id":113,"name":"SSC Napoli","shortName":"Napoli","tla":"NAP"},"score":{"fullTime":{"home":null,"away":null}}}
+        {"id":558554,"utcDate":"2026-10-28T19:45:00Z","status":"TIMED","homeTeam":{"id":5911,"name":"AC Monza","shortName":"Monza","tla":"MON"},"awayTeam":{"id":113,"name":"SSC Napoli","shortName":"Napoli","tla":"NAP"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":558558,"utcDate":"2026-10-29T17:30:00Z","status":"TIMED","homeTeam":{"id":470,"name":"Frosinone Calcio","shortName":"Frosinone","tla":"FRO"},"awayTeam":{"id":5890,"name":"US Lecce","shortName":"Lecce","tla":"USL"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":558551,"utcDate":"2026-10-29T19:45:00Z","status":"TIMED","homeTeam":{"id":99,"name":"ACF Fiorentina","shortName":"Fiorentina","tla":"FIO"},"awayTeam":{"id":102,"name":"Atalanta BC","shortName":"Atalanta","tla":"ATA"},"score":{"fullTime":{"home":null,"away":null}}}
       ]
     }
   }
