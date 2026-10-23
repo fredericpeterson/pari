@@ -1,6 +1,6 @@
-Scores mis à jour le 2026-10-22T21:30:12.978Z
+Scores mis à jour le 2026-10-23T04:41:06.595Z
 
-== Bundesliga (27 matchs) ==
+== Bundesliga (28 matchs) ==
 2026-10-09  Dortmund 2-2 Bremen  (terminé)
 2026-10-10  Mainz 3-4 Leverkusen  (terminé)
 2026-10-10  SC Paderborn 0-2 Stuttgart  (terminé)
@@ -28,8 +28,9 @@ Scores mis à jour le 2026-10-22T21:30:12.978Z
 2026-10-24  Dortmund vs Frankfurt  (à venir)
 2026-10-25  Hoffenheim vs Leverkusen  (à venir)
 2026-10-25  Freiburg vs Bayern  (à venir)
+2026-10-30  Elversberg vs Mainz  (à venir)
 
-== Ligue 1 (27 matchs) ==
+== Ligue 1 (29 matchs) ==
 2026-10-09  RC Lens 2-1 Olympique Lyon  (terminé)
 2026-10-10  Lille 1-0 Le Havre  (terminé)
 2026-10-10  Brest 5-1 Angers SCO  (terminé)
@@ -57,8 +58,10 @@ Scores mis à jour le 2026-10-22T21:30:12.978Z
 2026-10-25  Toulouse vs Troyes  (à venir)
 2026-10-25  Auxerre vs Le Mans  (à venir)
 2026-10-25  PSG vs Olympique Lyon  (à venir)
+2026-10-30  Le Havre vs PSG  (à venir)
+2026-10-30  Lille vs RC Lens  (à venir)
 
-== La Liga (31 matchs) ==
+== La Liga (32 matchs) ==
 2026-10-09  Málaga 1-1 Espanyol  (terminé)
 2026-10-10  Rayo Vallecano 0-0 Athletic  (annulé)
 2026-10-10  Alavés 1-2 Atleti  (terminé)
@@ -90,6 +93,7 @@ Scores mis à jour le 2026-10-22T21:30:12.978Z
 2026-10-25  Real Sociedad vs Levante  (à venir)
 2026-10-25  Barça vs Real Madrid  (à venir)
 2026-10-26  Sevilla FC vs Osasuna  (à venir)
+2026-10-30  Villarreal vs Espanyol  (à venir)
 
 == Premier League (30 matchs) ==
 2026-10-10  Arsenal 2-1 Leeds United  (terminé)
