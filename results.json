@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T11:31:47.149Z",
+  "updated": "2026-10-23T17:00:07.773Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -101,7 +101,7 @@
         {"id":559653,"utcDate":"2026-10-25T16:15:00Z","status":"TIMED","homeTeam":{"id":532,"name":"Angers SCO","shortName":"Angers SCO","tla":"ANG"},"awayTeam":{"id":525,"name":"FC Lorient","shortName":"Lorient","tla":"FCL"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559655,"utcDate":"2026-10-25T16:15:00Z","status":"TIMED","homeTeam":{"id":511,"name":"Toulouse FC","shortName":"Toulouse","tla":"TOU"},"awayTeam":{"id":531,"name":"ES Troyes AC","shortName":"Troyes","tla":"ETR"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559656,"utcDate":"2026-10-25T16:15:00Z","status":"TIMED","homeTeam":{"id":519,"name":"AJ Auxerre","shortName":"Auxerre","tla":"AJA"},"awayTeam":{"id":535,"name":"Le Mans FC","shortName":"Le Mans","tla":"LMF"},"score":{"fullTime":{"home":null,"away":null}}},
-        {"id":559648,"utcDate":"2026-10-25T19:45:00Z","status":"TIMED","homeTeam":{"id":524,"name":"Paris Saint-Germain FC","shortName":"PSG","tla":"PSG"},"awayTeam":{"id":523,"name":"Olympique Lyonnais","shortName":"Olympique Lyon","tla":"LYO"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":559648,"utcDate":"2026-10-26T19:30:00Z","status":"TIMED","homeTeam":{"id":524,"name":"Paris Saint-Germain FC","shortName":"PSG","tla":"PSG"},"awayTeam":{"id":523,"name":"Olympique Lyonnais","shortName":"Olympique Lyon","tla":"LYO"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559644,"utcDate":"2026-10-30T18:00:00Z","status":"TIMED","homeTeam":{"id":533,"name":"Le Havre AC","shortName":"Le Havre","tla":"HAC"},"awayTeam":{"id":524,"name":"Paris Saint-Germain FC","shortName":"PSG","tla":"PSG"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559639,"utcDate":"2026-10-30T20:05:00Z","status":"TIMED","homeTeam":{"id":521,"name":"Lille OSC","shortName":"Lille","tla":"LIL"},"awayTeam":{"id":546,"name":"Racing Club de Lens","shortName":"RC Lens","tla":"RCL"},"score":{"fullTime":{"home":null,"away":null}}}
       ]
