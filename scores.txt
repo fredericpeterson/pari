@@ -1,6 +1,6 @@
-Scores mis à jour le 2026-10-23T21:20:41.930Z
+Scores mis à jour le 2026-10-24T04:29:06.304Z
 
-== Bundesliga (28 matchs) ==
+== Bundesliga (34 matchs) ==
 2026-10-09  Dortmund 2-2 Bremen  (terminé)
 2026-10-10  Mainz 3-4 Leverkusen  (terminé)
 2026-10-10  SC Paderborn 0-2 Stuttgart  (terminé)
@@ -29,8 +29,14 @@ Scores mis à jour le 2026-10-23T21:20:41.930Z
 2026-10-25  Hoffenheim vs Leverkusen  (à venir)
 2026-10-25  Freiburg vs Bayern  (à venir)
 2026-10-30  Elversberg vs Mainz  (à venir)
+2026-10-31  M'gladbach vs SC Paderborn  (à venir)
+2026-10-31  Schalke vs RB Leipzig  (à venir)
+2026-10-31  Augsburg vs Freiburg  (à venir)
+2026-10-31  Bremen vs Hoffenheim  (à venir)
+2026-10-31  Leverkusen vs Stuttgart  (à venir)
+2026-10-31  Bayern vs Dortmund  (à venir)
 
-== Ligue 1 (29 matchs) ==
+== Ligue 1 (33 matchs) ==
 2026-10-09  RC Lens 2-1 Olympique Lyon  (terminé)
 2026-10-10  Lille 1-0 Le Havre  (terminé)
 2026-10-10  Brest 5-1 Angers SCO  (terminé)
@@ -60,8 +66,12 @@ Scores mis à jour le 2026-10-23T21:20:41.930Z
 2026-10-26  PSG vs Olympique Lyon  (à venir)
 2026-10-30  Le Havre vs PSG  (à venir)
 2026-10-30  Lille vs RC Lens  (à venir)
+2026-10-31  Nice vs Stade Rennais  (à venir)
+2026-10-31  Olympique Lyon vs Angers SCO  (à venir)
+2026-10-31  Lorient vs Brest  (à venir)
+2026-10-31  Troyes vs Le Mans  (à venir)
 
-== La Liga (32 matchs) ==
+== La Liga (36 matchs) ==
 2026-10-09  Málaga 1-1 Espanyol  (terminé)
 2026-10-10  Rayo Vallecano 0-0 Athletic  (annulé)
 2026-10-10  Alavés 1-2 Atleti  (terminé)
@@ -94,8 +104,12 @@ Scores mis à jour le 2026-10-23T21:20:41.930Z
 2026-10-25  Barça vs Real Madrid  (à venir)
 2026-10-26  Sevilla FC vs Osasuna  (à venir)
 2026-10-30  Villarreal vs Espanyol  (à venir)
+2026-10-31  Levante vs Atleti  (à venir)
+2026-10-31  Rayo Vallecano vs Celta  (à venir)
+2026-10-31  Real Betis vs Málaga  (à venir)
+2026-10-31  Barça vs Alavés  (à venir)
 
-== Premier League (30 matchs) ==
+== Premier League (38 matchs) ==
 2026-10-10  Arsenal 2-1 Leeds United  (terminé)
 2026-10-10  Sunderland 0-2 Brighton Hove  (terminé)
 2026-10-10  Chelsea 5-1 Bournemouth  (terminé)
@@ -126,8 +140,16 @@ Scores mis à jour le 2026-10-23T21:20:41.930Z
 2026-10-25  Man United vs Bournemouth  (à venir)
 2026-10-25  Hull City vs Brentford  (à venir)
 2026-10-25  Sunderland vs Leeds United  (à venir)
+2026-10-31  Chelsea vs Man United  (à venir)
+2026-10-31  Man City vs Brighton Hove  (à venir)
+2026-10-31  Bournemouth vs Leeds United  (à venir)
+2026-10-31  Coventry City vs Sunderland  (à venir)
+2026-10-31  Hull City vs Ipswich Town  (à venir)
+2026-10-31  Brentford vs Nottingham  (à venir)
+2026-10-31  Tottenham vs Crystal Palace  (à venir)
+2026-10-31  Aston Villa vs Fulham  (à venir)
 
-== Serie A (40 matchs) ==
+== Serie A (43 matchs) ==
 2026-10-10  Genoa 2-1 Fiorentina  (terminé)
 2026-10-10  Inter 3-0 Parma  (terminé)
 2026-10-10  Napoli 3-0 Frosinone  (terminé)
@@ -168,3 +190,6 @@ Scores mis à jour le 2026-10-23T21:20:41.930Z
 2026-10-28  Monza vs Napoli  (à venir)
 2026-10-29  Frosinone vs Lecce  (à venir)
 2026-10-29  Fiorentina vs Atalanta  (à venir)
+2026-10-31  Bologna vs Monza  (à venir)
+2026-10-31  Udinese vs Roma  (à venir)
+2026-10-31  Milan vs Inter  (à venir)
