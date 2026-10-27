@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-10-26T20:27:01.300Z
+Scores mis à jour le 2026-10-27T00:23:33.686Z
 
 == Bundesliga (36 matchs) ==
 2026-10-09  Dortmund 2-2 Bremen  (terminé)
@@ -65,7 +65,7 @@ Scores mis à jour le 2026-10-26T20:27:01.300Z
 2026-10-25  Angers SCO 0-0 Lorient  (terminé)
 2026-10-25  Toulouse 0-0 Troyes  (terminé)
 2026-10-25  Auxerre 1-1 Le Mans  (terminé)
-2026-10-26  PSG 0-0 Olympique Lyon  (en cours)
+2026-10-26  PSG 2-0 Olympique Lyon  (terminé)
 2026-10-30  Le Havre vs PSG  (à venir)
 2026-10-30  Lille vs RC Lens  (à venir)
 2026-10-31  Nice vs Stade Rennais  (à venir)
@@ -107,7 +107,7 @@ Scores mis à jour le 2026-10-26T20:27:01.300Z
 2026-10-25  Celta 0-0 Real Betis  (terminé)
 2026-10-25  Real Sociedad 2-1 Levante  (terminé)
 2026-10-25  Barça 1-2 Real Madrid  (terminé)
-2026-10-26  Sevilla FC 0-0 Osasuna  (en cours)
+2026-10-26  Sevilla FC 2-0 Osasuna  (terminé)
 2026-10-30  Villarreal vs Espanyol  (à venir)
 2026-10-31  Levante vs Atleti  (à venir)
 2026-10-31  Rayo Vallecano vs Celta  (à venir)
@@ -145,11 +145,11 @@ Scores mis à jour le 2026-10-26T20:27:01.300Z
 2026-10-24  Arsenal 2-0 Everton  (terminé)
 2026-10-24  Coventry City 0-1 Fulham  (terminé)
 2026-10-24  Chelsea 0-2 Tottenham  (terminé)
-2026-10-25  Liverpool vs Brighton Hove  (à venir)
-2026-10-25  Crystal Palace vs Newcastle  (à venir)
-2026-10-25  Man United vs Bournemouth  (à venir)
-2026-10-25  Hull City vs Brentford  (à venir)
-2026-10-25  Sunderland vs Leeds United  (à venir)
+2026-10-25  Liverpool 2-0 Brighton Hove  (terminé)
+2026-10-25  Crystal Palace 0-2 Newcastle  (terminé)
+2026-10-25  Man United 0-3 Bournemouth  (terminé)
+2026-10-25  Hull City 1-1 Brentford  (terminé)
+2026-10-25  Sunderland 0-0 Leeds United  (terminé)
 2026-10-31  Chelsea vs Man United  (à venir)
 2026-10-31  Man City vs Brighton Hove  (à venir)
 2026-10-31  Bournemouth vs Leeds United  (à venir)
