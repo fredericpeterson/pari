@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-10-27T15:18:45.805Z
+Scores mis à jour le 2026-10-27T22:08:08.374Z
 
 == Bundesliga (36 matchs) ==
 2026-10-09  Dortmund 2-2 Bremen  (terminé)
@@ -192,9 +192,9 @@ Scores mis à jour le 2026-10-27T15:18:45.805Z
 2026-10-25  Genoa 1-0 Venezia FC  (terminé)
 2026-10-25  Lecce 0-2 Juventus  (terminé)
 2026-10-25  Udinese 0-2 Milan  (terminé)
-2026-10-27  Sassuolo vs Lazio  (à venir)
-2026-10-27  Roma vs Cagliari  (à venir)
-2026-10-27  Torino vs Como 1907  (à venir)
+2026-10-27  Sassuolo 2-6 Lazio  (terminé)
+2026-10-27  Roma 4-2 Cagliari  (terminé)
+2026-10-27  Torino 1-3 Como 1907  (terminé)
 2026-10-28  Milan vs Bologna  (à venir)
 2026-10-28  Venezia FC vs Inter  (à venir)
 2026-10-28  Parma vs Udinese  (à venir)
