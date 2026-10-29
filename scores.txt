@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-10-29T09:51:11.171Z
+Scores mis à jour le 2026-10-29T18:25:49.805Z
 
 == Bundesliga (35 matchs) ==
 2026-10-10  Mainz 3-4 Leverkusen  (terminé)
@@ -197,7 +197,7 @@ Scores mis à jour le 2026-10-29T09:51:11.171Z
 2026-10-28  Parma 0-0 Udinese  (terminé)
 2026-10-28  Genoa 2-0 Juventus  (terminé)
 2026-10-28  Monza 1-4 Napoli  (terminé)
-2026-10-29  Frosinone vs Lecce  (à venir)
+2026-10-29  Frosinone 2-0 Lecce  (en cours)
 2026-10-29  Fiorentina vs Atalanta  (à venir)
 2026-10-31  Bologna vs Monza  (à venir)
 2026-10-31  Udinese vs Roma  (à venir)
