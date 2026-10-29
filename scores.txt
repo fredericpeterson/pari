@@ -1,7 +1,6 @@
-Scores mis à jour le 2026-10-28T20:14:24.933Z
+Scores mis à jour le 2026-10-29T00:51:41.235Z
 
-== Bundesliga (36 matchs) ==
-2026-10-09  Dortmund 2-2 Bremen  (terminé)
+== Bundesliga (35 matchs) ==
 2026-10-10  Mainz 3-4 Leverkusen  (terminé)
 2026-10-10  SC Paderborn 0-2 Stuttgart  (terminé)
 2026-10-10  Union Berlin 1-0 Elversberg  (terminé)
@@ -38,8 +37,7 @@ Scores mis à jour le 2026-10-28T20:14:24.933Z
 2026-11-01  Union Berlin vs 1. FC Köln  (à venir)
 2026-11-01  Frankfurt vs HSV  (à venir)
 
-== Ligue 1 (36 matchs) ==
-2026-10-09  RC Lens 2-1 Olympique Lyon  (terminé)
+== Ligue 1 (35 matchs) ==
 2026-10-10  Lille 1-0 Le Havre  (terminé)
 2026-10-10  Brest 5-1 Angers SCO  (terminé)
 2026-10-10  Lorient 1-0 Paris FC  (terminé)
@@ -67,17 +65,16 @@ Scores mis à jour le 2026-10-28T20:14:24.933Z
 2026-10-25  Auxerre 1-1 Le Mans  (terminé)
 2026-10-26  PSG 2-0 Olympique Lyon  (terminé)
 2026-10-30  Le Havre vs PSG  (à venir)
-2026-10-30  Nice vs Stade Rennais  (2026-10-31 16:15:00Z)
+2026-10-30  Nice vs Stade Rennais  (à venir)
 2026-10-30  Lille vs RC Lens  (à venir)
 2026-10-31  Troyes vs Le Mans  (à venir)
 2026-11-01  Strasbourg vs Auxerre  (à venir)
-2026-11-01  Olympique Lyon vs Angers SCO  (2026-10-31 19:45:00Z)
+2026-11-01  Olympique Lyon vs Angers SCO  (à venir)
 2026-11-01  Paris FC vs Monaco  (à venir)
 2026-11-01  Marseille vs Toulouse  (à venir)
-2026-11-02  Lorient vs Brest  (2026-10-31 19:45:00Z)
+2026-11-02  Lorient vs Brest  (à venir)
 
-== La Liga (41 matchs) ==
-2026-10-09  Málaga 1-1 Espanyol  (terminé)
+== La Liga (40 matchs) ==
 2026-10-10  Rayo Vallecano 0-0 Athletic  (annulé)
 2026-10-10  Alavés 1-2 Atleti  (terminé)
 2026-10-10  Barça 3-0 Getafe  (terminé)
@@ -198,8 +195,8 @@ Scores mis à jour le 2026-10-28T20:14:24.933Z
 2026-10-28  Milan 2-4 Bologna  (terminé)
 2026-10-28  Venezia FC 0-2 Inter  (terminé)
 2026-10-28  Parma 0-0 Udinese  (terminé)
-2026-10-28  Genoa 1-0 Juventus  (en cours)
-2026-10-28  Monza 0-1 Napoli  (en cours)
+2026-10-28  Genoa 2-0 Juventus  (terminé)
+2026-10-28  Monza 1-4 Napoli  (terminé)
 2026-10-29  Frosinone vs Lecce  (à venir)
 2026-10-29  Fiorentina vs Atalanta  (à venir)
 2026-10-31  Bologna vs Monza  (à venir)
