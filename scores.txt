@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-10-30T17:58:33.656Z
+Scores mis à jour le 2026-10-30T22:14:18.643Z
 
 == Bundesliga (30 matchs) ==
 2026-10-11  1. FC Köln 2-1 M'gladbach  (terminé)
@@ -21,7 +21,7 @@ Scores mis à jour le 2026-10-30T17:58:33.656Z
 2026-10-24  Dortmund 1-0 Frankfurt  (terminé)
 2026-10-25  Hoffenheim 3-0 Leverkusen  (terminé)
 2026-10-25  Freiburg 1-3 Bayern  (terminé)
-2026-10-30  Elversberg vs Mainz  (à venir)
+2026-10-30  Elversberg 4-1 Mainz  (terminé)
 2026-10-31  M'gladbach vs SC Paderborn  (à venir)
 2026-10-31  Schalke vs RB Leipzig  (à venir)
 2026-10-31  Augsburg vs Freiburg  (à venir)
@@ -54,9 +54,9 @@ Scores mis à jour le 2026-10-30T17:58:33.656Z
 2026-10-25  Toulouse 0-0 Troyes  (terminé)
 2026-10-25  Auxerre 1-1 Le Mans  (terminé)
 2026-10-26  PSG 2-0 Olympique Lyon  (terminé)
-2026-10-30  Le Havre vs PSG  (à venir)
-2026-10-30  Nice vs Stade Rennais  (à venir)
-2026-10-30  Lille vs RC Lens  (à venir)
+2026-10-30  Le Havre 1-5 PSG  (terminé)
+2026-10-30  Nice 5-2 Stade Rennais  (terminé)
+2026-10-30  Lille 1-0 RC Lens  (terminé)
 2026-10-31  Troyes vs Le Mans  (à venir)
 2026-11-01  Strasbourg vs Auxerre  (à venir)
 2026-11-01  Olympique Lyon vs Angers SCO  (à venir)
@@ -92,7 +92,7 @@ Scores mis à jour le 2026-10-30T17:58:33.656Z
 2026-10-25  Real Sociedad 2-1 Levante  (terminé)
 2026-10-25  Barça 1-2 Real Madrid  (terminé)
 2026-10-26  Sevilla FC 2-0 Osasuna  (terminé)
-2026-10-30  Villarreal vs Espanyol  (à venir)
+2026-10-30  Villarreal 0-1 Espanyol  (terminé)
 2026-10-31  Levante vs Atleti  (à venir)
 2026-10-31  Rayo Vallecano vs Celta  (à venir)
 2026-10-31  Real Betis vs Málaga  (à venir)
