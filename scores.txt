@@ -1,12 +1,6 @@
-Scores mis à jour le 2026-10-29T18:25:49.805Z
+Scores mis à jour le 2026-10-30T00:53:56.234Z
 
-== Bundesliga (35 matchs) ==
-2026-10-10  Mainz 3-4 Leverkusen  (terminé)
-2026-10-10  SC Paderborn 0-2 Stuttgart  (terminé)
-2026-10-10  Union Berlin 1-0 Elversberg  (terminé)
-2026-10-10  Hoffenheim 2-3 HSV  (terminé)
-2026-10-10  Augsburg 2-2 Bayern  (terminé)
-2026-10-10  RB Leipzig 6-0 Frankfurt  (terminé)
+== Bundesliga (30 matchs) ==
 2026-10-11  1. FC Köln 2-1 M'gladbach  (terminé)
 2026-10-11  Freiburg 2-1 Schalke  (terminé)
 2026-10-16  Frankfurt 1-0 1. FC Köln  (terminé)
@@ -36,13 +30,9 @@ Scores mis à jour le 2026-10-29T18:25:49.805Z
 2026-10-31  Bayern vs Dortmund  (à venir)
 2026-11-01  Union Berlin vs 1. FC Köln  (à venir)
 2026-11-01  Frankfurt vs HSV  (à venir)
+2026-11-06  HSV vs M'gladbach  (à venir)
 
-== Ligue 1 (35 matchs) ==
-2026-10-10  Lille 1-0 Le Havre  (terminé)
-2026-10-10  Brest 5-1 Angers SCO  (terminé)
-2026-10-10  Lorient 1-0 Paris FC  (terminé)
-2026-10-10  PSG 3-1 Le Mans  (terminé)
-2026-10-10  Monaco 2-2 Toulouse  (terminé)
+== Ligue 1 (31 matchs) ==
 2026-10-11  Nice 2-1 Strasbourg  (terminé)
 2026-10-11  Stade Rennais 4-1 Auxerre  (terminé)
 2026-10-11  Troyes 0-2 Marseille  (terminé)
@@ -73,12 +63,9 @@ Scores mis à jour le 2026-10-29T18:25:49.805Z
 2026-11-01  Paris FC vs Monaco  (à venir)
 2026-11-01  Marseille vs Toulouse  (à venir)
 2026-11-02  Lorient vs Brest  (à venir)
+2026-11-06  Toulouse vs Strasbourg  (à venir)
 
-== La Liga (40 matchs) ==
-2026-10-10  Rayo Vallecano 0-0 Athletic  (annulé)
-2026-10-10  Alavés 1-2 Atleti  (terminé)
-2026-10-10  Barça 3-0 Getafe  (terminé)
-2026-10-10  Real Madrid 1-0 Villarreal  (terminé)
+== La Liga (37 matchs) ==
 2026-10-11  Elche 0-0 Celta  (terminé)
 2026-10-11  Real Sociedad 3-2 Deportivo  (terminé)
 2026-10-11  Real Betis 5-2 Osasuna  (terminé)
@@ -115,14 +102,9 @@ Scores mis à jour le 2026-10-29T18:25:49.805Z
 2026-11-01  Elche vs Valencia  (à venir)
 2026-11-01  Athletic vs Real Sociedad  (à venir)
 2026-11-02  Deportivo vs Osasuna  (à venir)
+2026-11-06  Sevilla FC vs Alavés  (à venir)
 
-== Premier League (40 matchs) ==
-2026-10-10  Arsenal 2-1 Leeds United  (terminé)
-2026-10-10  Sunderland 0-2 Brighton Hove  (terminé)
-2026-10-10  Chelsea 5-1 Bournemouth  (terminé)
-2026-10-10  Ipswich Town 2-1 Fulham  (terminé)
-2026-10-10  Aston Villa 2-2 Brentford  (terminé)
-2026-10-10  Man United 1-1 Tottenham  (terminé)
+== Premier League (35 matchs) ==
 2026-10-11  Hull City 2-2 Everton  (terminé)
 2026-10-11  Crystal Palace 3-1 Nottingham  (terminé)
 2026-10-11  Liverpool 0-3 Man City  (terminé)
@@ -157,11 +139,9 @@ Scores mis à jour le 2026-10-29T18:25:49.805Z
 2026-10-31  Aston Villa vs Fulham  (à venir)
 2026-11-01  Liverpool vs Arsenal  (à venir)
 2026-11-02  Newcastle vs Everton  (à venir)
+2026-11-06  Everton vs Coventry City  (à venir)
 
-== Serie A (50 matchs) ==
-2026-10-10  Genoa 2-1 Fiorentina  (terminé)
-2026-10-10  Inter 3-0 Parma  (terminé)
-2026-10-10  Napoli 3-0 Frosinone  (terminé)
+== Serie A (48 matchs) ==
 2026-10-11  Como 1907 0-0 Roma  (terminé)
 2026-10-11  Lecce 1-2 Bologna  (terminé)
 2026-10-11  Lazio 3-1 Monza  (terminé)
@@ -197,8 +177,8 @@ Scores mis à jour le 2026-10-29T18:25:49.805Z
 2026-10-28  Parma 0-0 Udinese  (terminé)
 2026-10-28  Genoa 2-0 Juventus  (terminé)
 2026-10-28  Monza 1-4 Napoli  (terminé)
-2026-10-29  Frosinone 2-0 Lecce  (en cours)
-2026-10-29  Fiorentina vs Atalanta  (à venir)
+2026-10-29  Frosinone 5-1 Lecce  (terminé)
+2026-10-29  Fiorentina 2-2 Atalanta  (terminé)
 2026-10-31  Bologna vs Monza  (à venir)
 2026-10-31  Udinese vs Roma  (à venir)
 2026-10-31  Milan vs Inter  (à venir)
@@ -209,3 +189,4 @@ Scores mis à jour le 2026-10-29T18:25:49.805Z
 2026-11-01  Juventus vs Napoli  (à venir)
 2026-11-02  Sassuolo vs Fiorentina  (à venir)
 2026-11-02  Atalanta vs Parma  (à venir)
+2026-11-06  Venezia FC vs Udinese  (à venir)
