@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-01T05:54:50.152Z
+Scores mis à jour le 2026-11-01T13:13:37.929Z
 
 == Bundesliga (36 matchs) ==
 2026-10-16  Frankfurt 1-0 1. FC Köln  (terminé)
@@ -103,7 +103,7 @@ Scores mis à jour le 2026-11-01T05:54:50.152Z
 2026-10-31  Rayo Vallecano 3-0 Celta  (terminé)
 2026-10-31  Real Betis 2-1 Málaga  (terminé)
 2026-10-31  Barça 6-1 Alavés  (terminé)
-2026-11-01  Getafe vs Sevilla FC  (à venir)
+2026-11-01  Getafe 0-0 Sevilla FC  (en cours)
 2026-11-01  Santander vs Real Madrid  (à venir)
 2026-11-01  Elche vs Valencia  (à venir)
 2026-11-01  Athletic vs Real Sociedad  (à venir)
@@ -195,7 +195,7 @@ Scores mis à jour le 2026-11-01T05:54:50.152Z
 2026-10-31  Bologna 2-1 Monza  (terminé)
 2026-10-31  Udinese 2-5 Roma  (terminé)
 2026-10-31  Milan 3-1 Inter  (terminé)
-2026-11-01  Como 1907 vs Venezia FC  (à venir)
+2026-11-01  Como 1907 1-0 Venezia FC  (en cours)
 2026-11-01  Frosinone vs Torino  (à venir)
 2026-11-01  Lazio vs Cagliari  (à venir)
 2026-11-01  Lecce vs Genoa  (à venir)
