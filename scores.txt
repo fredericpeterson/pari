@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-01T00:04:25.335Z
+Scores mis à jour le 2026-11-01T05:54:50.152Z
 
 == Bundesliga (36 matchs) ==
 2026-10-16  Frankfurt 1-0 1. FC Köln  (terminé)
@@ -60,7 +60,7 @@ Scores mis à jour le 2026-11-01T00:04:25.335Z
 2026-10-30  Le Havre 1-5 PSG  (terminé)
 2026-10-30  Nice 5-2 Stade Rennais  (terminé)
 2026-10-30  Lille 1-0 RC Lens  (terminé)
-2026-10-31  Troyes vs Le Mans  (à venir)
+2026-10-31  Troyes 2-0 Le Mans  (terminé)
 2026-11-01  Strasbourg vs Auxerre  (à venir)
 2026-11-01  Olympique Lyon vs Angers SCO  (à venir)
 2026-11-01  Paris FC vs Monaco  (à venir)

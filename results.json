@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T00:04:25.335Z",
+  "updated": "2026-11-01T05:54:50.152Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -104,7 +104,7 @@
         {"id":559644,"utcDate":"2026-10-30T18:00:00Z","status":"FINISHED","homeTeam":{"id":533,"name":"Le Havre AC","shortName":"Le Havre","tla":"HAC"},"awayTeam":{"id":524,"name":"Paris Saint-Germain FC","shortName":"PSG","tla":"PSG"},"score":{"fullTime":{"home":1,"away":5}}},
         {"id":559646,"utcDate":"2026-10-30T18:00:00Z","status":"FINISHED","homeTeam":{"id":522,"name":"OGC Nice","shortName":"Nice","tla":"NIC"},"awayTeam":{"id":529,"name":"Stade Rennais FC 1901","shortName":"Stade Rennais","tla":"REN"},"score":{"fullTime":{"home":5,"away":2}}},
         {"id":559639,"utcDate":"2026-10-30T20:05:00Z","status":"FINISHED","homeTeam":{"id":521,"name":"Lille OSC","shortName":"Lille","tla":"LIL"},"awayTeam":{"id":546,"name":"Racing Club de Lens","shortName":"RC Lens","tla":"RCL"},"score":{"fullTime":{"home":1,"away":0}}},
-        {"id":559643,"utcDate":"2026-10-31T19:45:00Z","status":"TIMED","homeTeam":{"id":531,"name":"ES Troyes AC","shortName":"Troyes","tla":"ETR"},"awayTeam":{"id":535,"name":"Le Mans FC","shortName":"Le Mans","tla":"LMF"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":559643,"utcDate":"2026-10-31T19:45:00Z","status":"FINISHED","homeTeam":{"id":531,"name":"ES Troyes AC","shortName":"Troyes","tla":"ETR"},"awayTeam":{"id":535,"name":"Le Mans FC","shortName":"Le Mans","tla":"LMF"},"score":{"fullTime":{"home":2,"away":0}}},
         {"id":559647,"utcDate":"2026-11-01T14:00:00Z","status":"TIMED","homeTeam":{"id":576,"name":"RC Strasbourg Alsace","shortName":"Strasbourg","tla":"RC "},"awayTeam":{"id":519,"name":"AJ Auxerre","shortName":"Auxerre","tla":"AJA"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559640,"utcDate":"2026-11-01T16:15:00Z","status":"TIMED","homeTeam":{"id":523,"name":"Olympique Lyonnais","shortName":"Olympique Lyon","tla":"LYO"},"awayTeam":{"id":532,"name":"Angers SCO","shortName":"Angers SCO","tla":"ANG"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":559642,"utcDate":"2026-11-01T16:15:00Z","status":"TIMED","homeTeam":{"id":1045,"name":"Paris FC","shortName":"Paris FC","tla":"PFC"},"awayTeam":{"id":548,"name":"AS Monaco FC","shortName":"Monaco","tla":"ASM"},"score":{"fullTime":{"home":null,"away":null}}},
