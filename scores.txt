@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-01T13:13:37.929Z
+Scores mis à jour le 2026-11-01T19:36:38.217Z
 
 == Bundesliga (36 matchs) ==
 2026-10-16  Frankfurt 1-0 1. FC Köln  (terminé)
@@ -103,9 +103,9 @@ Scores mis à jour le 2026-11-01T13:13:37.929Z
 2026-10-31  Rayo Vallecano 3-0 Celta  (terminé)
 2026-10-31  Real Betis 2-1 Málaga  (terminé)
 2026-10-31  Barça 6-1 Alavés  (terminé)
-2026-11-01  Getafe 0-0 Sevilla FC  (en cours)
-2026-11-01  Santander vs Real Madrid  (à venir)
-2026-11-01  Elche vs Valencia  (à venir)
+2026-11-01  Getafe 3-1 Sevilla FC  (terminé)
+2026-11-01  Santander 0-3 Real Madrid  (terminé)
+2026-11-01  Elche 0-1 Valencia  (terminé)
 2026-11-01  Athletic vs Real Sociedad  (à venir)
 2026-11-02  Deportivo vs Osasuna  (à venir)
 2026-11-06  Sevilla FC vs Alavés  (à venir)
@@ -148,7 +148,7 @@ Scores mis à jour le 2026-11-01T13:13:37.929Z
 2026-10-31  Brentford 2-0 Nottingham  (terminé)
 2026-10-31  Tottenham 2-0 Crystal Palace  (terminé)
 2026-10-31  Aston Villa 1-1 Fulham  (terminé)
-2026-11-01  Liverpool vs Arsenal  (à venir)
+2026-11-01  Liverpool 0-1 Arsenal  (terminé)
 2026-11-02  Newcastle vs Everton  (à venir)
 2026-11-06  Everton vs Coventry City  (à venir)
 2026-11-07  Leeds United vs Tottenham  (à venir)
@@ -195,10 +195,10 @@ Scores mis à jour le 2026-11-01T13:13:37.929Z
 2026-10-31  Bologna 2-1 Monza  (terminé)
 2026-10-31  Udinese 2-5 Roma  (terminé)
 2026-10-31  Milan 3-1 Inter  (terminé)
-2026-11-01  Como 1907 1-0 Venezia FC  (en cours)
-2026-11-01  Frosinone vs Torino  (à venir)
-2026-11-01  Lazio vs Cagliari  (à venir)
-2026-11-01  Lecce vs Genoa  (à venir)
+2026-11-01  Como 1907 1-0 Venezia FC  (terminé)
+2026-11-01  Frosinone 2-0 Torino  (terminé)
+2026-11-01  Lazio 2-1 Cagliari  (terminé)
+2026-11-01  Lecce 1-2 Genoa  (terminé)
 2026-11-01  Juventus vs Napoli  (à venir)
 2026-11-02  Sassuolo vs Fiorentina  (à venir)
 2026-11-02  Atalanta vs Parma  (à venir)
