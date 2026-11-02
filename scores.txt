@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-02T00:38:02.456Z
+Scores mis à jour le 2026-11-02T10:55:05.400Z
 
 == Bundesliga (36 matchs) ==
 2026-10-16  Frankfurt 1-0 1. FC Köln  (terminé)
@@ -148,7 +148,7 @@ Scores mis à jour le 2026-11-02T00:38:02.456Z
 2026-10-31  Brentford 2-0 Nottingham  (terminé)
 2026-10-31  Tottenham 2-0 Crystal Palace  (terminé)
 2026-10-31  Aston Villa 1-1 Fulham  (terminé)
-2026-11-01  Liverpool vs Arsenal  (à venir)
+2026-11-01  Liverpool 0-1 Arsenal  (terminé)
 2026-11-02  Newcastle vs Everton  (à venir)
 2026-11-06  Everton vs Coventry City  (à venir)
 2026-11-07  Leeds United vs Tottenham  (à venir)

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T00:38:02.456Z",
+  "updated": "2026-11-02T10:55:05.400Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -240,7 +240,7 @@
         {"id":560630,"utcDate":"2026-10-31T15:00:00Z","status":"FINISHED","homeTeam":{"id":402,"name":"Brentford FC","shortName":"Brentford","tla":"BRE"},"awayTeam":{"id":351,"name":"Nottingham Forest FC","shortName":"Nottingham","tla":"NOT"},"score":{"fullTime":{"home":2,"away":0}}},
         {"id":560627,"utcDate":"2026-10-31T17:30:00Z","status":"FINISHED","homeTeam":{"id":73,"name":"Tottenham Hotspur FC","shortName":"Tottenham","tla":"TOT"},"awayTeam":{"id":354,"name":"Crystal Palace FC","shortName":"Crystal Palace","tla":"CRY"},"score":{"fullTime":{"home":2,"away":0}}},
         {"id":560628,"utcDate":"2026-10-31T20:00:00Z","status":"FINISHED","homeTeam":{"id":58,"name":"Aston Villa FC","shortName":"Aston Villa","tla":"AVL"},"awayTeam":{"id":63,"name":"Fulham FC","shortName":"Fulham","tla":"FUL"},"score":{"fullTime":{"home":1,"away":1}}},
-        {"id":560631,"utcDate":"2026-11-01T16:30:00Z","status":"TIMED","homeTeam":{"id":64,"name":"Liverpool FC","shortName":"Liverpool","tla":"LIV"},"awayTeam":{"id":57,"name":"Arsenal FC","shortName":"Arsenal","tla":"ARS"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":560631,"utcDate":"2026-11-01T16:30:00Z","status":"FINISHED","homeTeam":{"id":64,"name":"Liverpool FC","shortName":"Liverpool","tla":"LIV"},"awayTeam":{"id":57,"name":"Arsenal FC","shortName":"Arsenal","tla":"ARS"},"score":{"fullTime":{"home":0,"away":1}}},
         {"id":560622,"utcDate":"2026-11-02T20:00:00Z","status":"TIMED","homeTeam":{"id":67,"name":"Newcastle United FC","shortName":"Newcastle","tla":"NEW"},"awayTeam":{"id":62,"name":"Everton FC","shortName":"Everton","tla":"EVE"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":560634,"utcDate":"2026-11-06T20:00:00Z","status":"TIMED","homeTeam":{"id":62,"name":"Everton FC","shortName":"Everton","tla":"EVE"},"awayTeam":{"id":1076,"name":"Coventry City FC","shortName":"Coventry City","tla":"COV"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":560632,"utcDate":"2026-11-07T12:30:00Z","status":"TIMED","homeTeam":{"id":341,"name":"Leeds United FC","shortName":"Leeds United","tla":"LEE"},"awayTeam":{"id":73,"name":"Tottenham Hotspur FC","shortName":"Tottenham","tla":"TOT"},"score":{"fullTime":{"home":null,"away":null}}},
