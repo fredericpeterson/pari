@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-02T21:41:30.845Z
+Scores mis à jour le 2026-11-03T06:40:09.567Z
 
 == Bundesliga (36 matchs) ==
 2026-10-16  Frankfurt 1-0 1. FC Köln  (terminé)
@@ -65,7 +65,7 @@ Scores mis à jour le 2026-11-02T21:41:30.845Z
 2026-11-01  Olympique Lyon 2-0 Angers SCO  (terminé)
 2026-11-01  Paris FC 3-1 Monaco  (terminé)
 2026-11-01  Marseille 2-0 Toulouse  (terminé)
-2026-11-02  Lorient 0-2 Brest  (en cours)
+2026-11-02  Lorient 0-2 Brest  (terminé)
 2026-11-06  Toulouse vs Strasbourg  (à venir)
 2026-11-07  Auxerre vs Paris FC  (à venir)
 2026-11-07  PSG vs Troyes  (à venir)
@@ -107,7 +107,7 @@ Scores mis à jour le 2026-11-02T21:41:30.845Z
 2026-11-01  Santander 0-3 Real Madrid  (terminé)
 2026-11-01  Elche 0-1 Valencia  (terminé)
 2026-11-01  Athletic 2-1 Real Sociedad  (terminé)
-2026-11-02  Deportivo 1-1 Osasuna  (en cours)
+2026-11-02  Deportivo 2-1 Osasuna  (terminé)
 2026-11-06  Sevilla FC vs Alavés  (à venir)
 2026-11-07  Málaga vs Santander  (à venir)
 2026-11-07  Espanyol vs Deportivo  (à venir)
@@ -149,7 +149,7 @@ Scores mis à jour le 2026-11-02T21:41:30.845Z
 2026-10-31  Tottenham 2-0 Crystal Palace  (terminé)
 2026-10-31  Aston Villa 1-1 Fulham  (terminé)
 2026-11-01  Liverpool 0-1 Arsenal  (terminé)
-2026-11-02  Newcastle 0-1 Everton  (en cours)
+2026-11-02  Newcastle 0-1 Everton  (terminé)
 2026-11-06  Everton vs Coventry City  (à venir)
 2026-11-07  Leeds United vs Tottenham  (à venir)
 2026-11-07  Arsenal vs Hull City  (à venir)
