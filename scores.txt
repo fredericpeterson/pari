@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-06T16:43:28.976Z
+Scores mis à jour le 2026-11-06T23:03:31.961Z
 
 == Bundesliga (29 matchs) ==
 2026-10-18  Leverkusen 2-1 Freiburg  (terminé)
@@ -21,7 +21,7 @@ Scores mis à jour le 2026-11-06T16:43:28.976Z
 2026-10-31  Bayern 2-2 Dortmund  (terminé)
 2026-11-01  Union Berlin 1-1 1. FC Köln  (terminé)
 2026-11-01  Frankfurt 3-1 HSV  (terminé)
-2026-11-06  HSV vs M'gladbach  (à venir)
+2026-11-06  HSV 3-1 M'gladbach  (terminé)
 2026-11-07  RB Leipzig vs Augsburg  (à venir)
 2026-11-07  Dortmund vs Elversberg  (à venir)
 2026-11-07  Mainz vs Bayern  (à venir)
@@ -55,7 +55,7 @@ Scores mis à jour le 2026-11-06T16:43:28.976Z
 2026-11-01  Paris FC 3-1 Monaco  (terminé)
 2026-11-01  Marseille 2-0 Toulouse  (terminé)
 2026-11-02  Lorient 0-2 Brest  (terminé)
-2026-11-06  Toulouse vs Strasbourg  (à venir)
+2026-11-06  Toulouse 3-1 Strasbourg  (terminé)
 2026-11-07  Auxerre vs Paris FC  (à venir)
 2026-11-07  PSG vs Troyes  (à venir)
 2026-11-08  Stade Rennais vs Lille  (à venir)
@@ -92,7 +92,7 @@ Scores mis à jour le 2026-11-06T16:43:28.976Z
 2026-11-01  Elche 0-1 Valencia  (terminé)
 2026-11-01  Athletic 2-1 Real Sociedad  (terminé)
 2026-11-02  Deportivo 2-1 Osasuna  (terminé)
-2026-11-06  Sevilla FC vs Alavés  (à venir)
+2026-11-06  Sevilla FC 0-0 Alavés  (terminé)
 2026-11-07  Málaga vs Santander  (à venir)
 2026-11-07  Espanyol vs Deportivo  (à venir)
 2026-11-07  Osasuna vs Athletic  (à venir)
@@ -129,7 +129,7 @@ Scores mis à jour le 2026-11-06T16:43:28.976Z
 2026-10-31  Aston Villa 1-1 Fulham  (terminé)
 2026-11-01  Liverpool 0-1 Arsenal  (terminé)
 2026-11-02  Newcastle 0-1 Everton  (terminé)
-2026-11-06  Everton vs Coventry City  (à venir)
+2026-11-06  Everton 3-1 Coventry City  (terminé)
 2026-11-07  Leeds United vs Tottenham  (à venir)
 2026-11-07  Arsenal vs Hull City  (à venir)
 2026-11-07  Fulham vs Newcastle  (à venir)
@@ -177,7 +177,7 @@ Scores mis à jour le 2026-11-06T16:43:28.976Z
 2026-11-01  Juventus 2-0 Napoli  (terminé)
 2026-11-02  Sassuolo 2-4 Fiorentina  (terminé)
 2026-11-02  Atalanta 0-3 Parma  (terminé)
-2026-11-06  Venezia FC vs Udinese  (à venir)
+2026-11-06  Venezia FC 2-1 Udinese  (terminé)
 2026-11-07  Torino vs Lecce  (à venir)
 2026-11-07  Cagliari vs Frosinone  (à venir)
 2026-11-07  Parma vs Bologna  (à venir)
