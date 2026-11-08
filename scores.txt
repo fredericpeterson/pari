@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-08T10:12:54.397Z
+Scores mis à jour le 2026-11-08T17:53:52.766Z
 
 == Bundesliga (27 matchs) ==
 2026-10-23  Stuttgart 2-3 M'gladbach  (terminé)
@@ -25,8 +25,8 @@ Scores mis à jour le 2026-11-08T10:12:54.397Z
 2026-11-07  Mainz 1-2 Bayern  (terminé)
 2026-11-07  SC Paderborn 2-2 Frankfurt  (terminé)
 2026-11-07  Stuttgart 1-0 Bremen  (terminé)
-2026-11-08  1. FC Köln vs Leverkusen  (à venir)
-2026-11-08  Freiburg vs Union Berlin  (à venir)
+2026-11-08  1. FC Köln 1-2 Leverkusen  (terminé)
+2026-11-08  Freiburg 1-0 Union Berlin  (en cours)
 2026-11-08  Hoffenheim vs Schalke  (à venir)
 
 == Ligue 1 (27 matchs) ==
@@ -51,11 +51,11 @@ Scores mis à jour le 2026-11-08T10:12:54.397Z
 2026-11-06  Toulouse 3-1 Strasbourg  (terminé)
 2026-11-07  Auxerre 0-1 Paris FC  (terminé)
 2026-11-07  PSG 1-0 Troyes  (terminé)
-2026-11-08  Stade Rennais vs Lille  (à venir)
-2026-11-08  Le Mans vs Monaco  (à venir)
-2026-11-08  Brest vs Olympique Lyon  (à venir)
-2026-11-08  Le Havre vs Lorient  (à venir)
-2026-11-08  Angers SCO vs Nice  (à venir)
+2026-11-08  Stade Rennais 1-2 Lille  (terminé)
+2026-11-08  Le Mans 0-1 Monaco  (en cours)
+2026-11-08  Brest 1-0 Olympique Lyon  (en cours)
+2026-11-08  Le Havre 1-1 Lorient  (en cours)
+2026-11-08  Angers SCO 0-1 Nice  (en cours)
 2026-11-08  RC Lens vs Marseille  (à venir)
 
 == La Liga (31 matchs) ==
@@ -85,10 +85,10 @@ Scores mis à jour le 2026-11-08T10:12:54.397Z
 2026-11-07  Espanyol 0-0 Deportivo  (terminé)
 2026-11-07  Osasuna 1-1 Athletic  (terminé)
 2026-11-07  Valencia 0-3 Real Madrid  (terminé)
-2026-11-08  Elche vs Real Betis  (à venir)
-2026-11-08  Real Sociedad vs Rayo Vallecano  (à venir)
-2026-11-08  Celta vs Levante  (à venir)
-2026-11-08  Villarreal vs Getafe  (à venir)
+2026-11-08  Elche 0-2 Real Betis  (terminé)
+2026-11-08  Real Sociedad 1-0 Rayo Vallecano  (terminé)
+2026-11-08  Celta 0-0 Levante  (en cours)
+2026-11-08  Villarreal 0-0 Getafe  (en cours)
 2026-11-08  Atleti vs Barça  (à venir)
 
 == Premier League (30 matchs) ==
@@ -117,11 +117,11 @@ Scores mis à jour le 2026-11-08T10:12:54.397Z
 2026-11-07  Arsenal 1-0 Hull City  (terminé)
 2026-11-07  Fulham 1-1 Newcastle  (terminé)
 2026-11-07  Nottingham 3-1 Man City  (terminé)
-2026-11-08  Crystal Palace vs Liverpool  (à venir)
-2026-11-08  Sunderland vs Chelsea  (à venir)
-2026-11-08  Ipswich Town vs Bournemouth  (à venir)
-2026-11-08  Brighton Hove vs Brentford  (à venir)
-2026-11-08  Man United vs Aston Villa  (à venir)
+2026-11-08  Crystal Palace 1-3 Liverpool  (terminé)
+2026-11-08  Sunderland 1-0 Chelsea  (terminé)
+2026-11-08  Ipswich Town 1-2 Bournemouth  (terminé)
+2026-11-08  Brighton Hove 2-0 Brentford  (terminé)
+2026-11-08  Man United 2-4 Aston Villa  (en cours)
 
 == Serie A (40 matchs) ==
 2026-10-23  Torino 3-2 Monza  (terminé)
@@ -159,8 +159,8 @@ Scores mis à jour le 2026-11-08T10:12:54.397Z
 2026-11-07  Cagliari 1-0 Frosinone  (terminé)
 2026-11-07  Parma 1-2 Bologna  (terminé)
 2026-11-07  Roma 3-0 Sassuolo  (terminé)
-2026-11-08  Napoli vs Lazio  (à venir)
-2026-11-08  Genoa vs Milan  (à venir)
-2026-11-08  Monza vs Atalanta  (à venir)
-2026-11-08  Inter vs Como 1907  (à venir)
+2026-11-08  Napoli 1-1 Lazio  (terminé)
+2026-11-08  Genoa 1-2 Milan  (terminé)
+2026-11-08  Monza 0-1 Atalanta  (terminé)
+2026-11-08  Inter 2-0 Como 1907  (en cours)
 2026-11-08  Fiorentina vs Juventus  (à venir)
