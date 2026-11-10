@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T11:02:16.530Z",
+  "updated": "2026-11-10T19:40:11.851Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -137,11 +137,11 @@
         {"id":564726,"utcDate":"2026-10-25T17:30:00Z","status":"FINISHED","homeTeam":{"id":92,"name":"Real Sociedad de Fútbol","shortName":"Real Sociedad","tla":"RSO"},"awayTeam":{"id":88,"name":"Levante UD","shortName":"Levante","tla":"LEV"},"score":{"fullTime":{"home":2,"away":1}}},
         {"id":564723,"utcDate":"2026-10-25T20:00:00Z","status":"FINISHED","homeTeam":{"id":81,"name":"FC Barcelona","shortName":"Barça","tla":"FCB"},"awayTeam":{"id":86,"name":"Real Madrid CF","shortName":"Real Madrid","tla":"RMA"},"score":{"fullTime":{"home":1,"away":2}}},
         {"id":564721,"utcDate":"2026-10-26T20:00:00Z","status":"FINISHED","homeTeam":{"id":559,"name":"Sevilla FC","shortName":"Sevilla FC","tla":"SEV"},"awayTeam":{"id":79,"name":"CA Osasuna","shortName":"Osasuna","tla":"OSA"},"score":{"fullTime":{"home":2,"away":0}}},
-        {"id":564737,"utcDate":"2026-10-30T20:00:00Z","status":"2026-10-30 20:00:00Z","homeTeam":{"id":94,"name":"Villarreal CF","shortName":"Villarreal","tla":"VIL"},"awayTeam":{"id":80,"name":"RCD Espanyol de Barcelona","shortName":"Espanyol","tla":"ESP"},"score":{"fullTime":{"home":0,"away":1}}},
-        {"id":564730,"utcDate":"2026-10-31T13:00:00Z","status":"2026-10-31 13:00:00Z","homeTeam":{"id":88,"name":"Levante UD","shortName":"Levante","tla":"LEV"},"awayTeam":{"id":78,"name":"Club Atlético de Madrid","shortName":"Atleti","tla":"ATL"},"score":{"fullTime":{"home":0,"away":2}}},
-        {"id":564735,"utcDate":"2026-10-31T15:15:00Z","status":"2026-10-31 15:15:00Z","homeTeam":{"id":87,"name":"Rayo Vallecano de Madrid","shortName":"Rayo Vallecano","tla":"RAY"},"awayTeam":{"id":558,"name":"RC Celta de Vigo","shortName":"Celta","tla":"CEL"},"score":{"fullTime":{"home":3,"away":0}}},
-        {"id":564736,"utcDate":"2026-10-31T17:30:00Z","status":"2026-10-31 17:30:00Z","homeTeam":{"id":90,"name":"Real Betis Balompié","shortName":"Real Betis","tla":"BET"},"awayTeam":{"id":84,"name":"Málaga CF","shortName":"Málaga","tla":"MAL"},"score":{"fullTime":{"home":2,"away":1}}},
-        {"id":564732,"utcDate":"2026-10-31T20:00:00Z","status":"2026-10-31 20:00:00Z","homeTeam":{"id":81,"name":"FC Barcelona","shortName":"Barça","tla":"FCB"},"awayTeam":{"id":263,"name":"Deportivo Alavés","shortName":"Alavés","tla":"ALA"},"score":{"fullTime":{"home":6,"away":1}}},
+        {"id":564737,"utcDate":"2026-10-30T20:00:00Z","status":"FINISHED","homeTeam":{"id":94,"name":"Villarreal CF","shortName":"Villarreal","tla":"VIL"},"awayTeam":{"id":80,"name":"RCD Espanyol de Barcelona","shortName":"Espanyol","tla":"ESP"},"score":{"fullTime":{"home":0,"away":1}}},
+        {"id":564730,"utcDate":"2026-10-31T13:00:00Z","status":"FINISHED","homeTeam":{"id":88,"name":"Levante UD","shortName":"Levante","tla":"LEV"},"awayTeam":{"id":78,"name":"Club Atlético de Madrid","shortName":"Atleti","tla":"ATL"},"score":{"fullTime":{"home":0,"away":2}}},
+        {"id":564735,"utcDate":"2026-10-31T15:15:00Z","status":"FINISHED","homeTeam":{"id":87,"name":"Rayo Vallecano de Madrid","shortName":"Rayo Vallecano","tla":"RAY"},"awayTeam":{"id":558,"name":"RC Celta de Vigo","shortName":"Celta","tla":"CEL"},"score":{"fullTime":{"home":3,"away":0}}},
+        {"id":564736,"utcDate":"2026-10-31T17:30:00Z","status":"FINISHED","homeTeam":{"id":90,"name":"Real Betis Balompié","shortName":"Real Betis","tla":"BET"},"awayTeam":{"id":84,"name":"Málaga CF","shortName":"Málaga","tla":"MAL"},"score":{"fullTime":{"home":2,"away":1}}},
+        {"id":564732,"utcDate":"2026-10-31T20:00:00Z","status":"FINISHED","homeTeam":{"id":81,"name":"FC Barcelona","shortName":"Barça","tla":"FCB"},"awayTeam":{"id":263,"name":"Deportivo Alavés","shortName":"Alavés","tla":"ALA"},"score":{"fullTime":{"home":6,"away":1}}},
         {"id":564733,"utcDate":"2026-11-01T13:00:00Z","status":"FINISHED","homeTeam":{"id":82,"name":"Getafe CF","shortName":"Getafe","tla":"GET"},"awayTeam":{"id":559,"name":"Sevilla FC","shortName":"Sevilla FC","tla":"SEV"},"score":{"fullTime":{"home":3,"away":1}}},
         {"id":564734,"utcDate":"2026-11-01T15:15:00Z","status":"FINISHED","homeTeam":{"id":5335,"name":"Real Racing Club de Santander","shortName":"Santander","tla":"SAN"},"awayTeam":{"id":86,"name":"Real Madrid CF","shortName":"Real Madrid","tla":"RMA"},"score":{"fullTime":{"home":0,"away":3}}},
         {"id":564728,"utcDate":"2026-11-01T17:30:00Z","status":"FINISHED","homeTeam":{"id":285,"name":"Elche CF","shortName":"Elche","tla":"ELC"},"awayTeam":{"id":95,"name":"Valencia CF","shortName":"Valencia","tla":"VAL"},"score":{"fullTime":{"home":0,"away":1}}},
