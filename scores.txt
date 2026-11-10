@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-09T16:12:50.051Z
+Scores mis à jour le 2026-11-10T01:28:34.627Z
 
 == Bundesliga (27 matchs) ==
 2026-10-23  Stuttgart 2-3 M'gladbach  (terminé)
@@ -58,8 +58,7 @@ Scores mis à jour le 2026-11-09T16:12:50.051Z
 2026-11-08  Angers SCO 0-2 Nice  (terminé)
 2026-11-08  RC Lens 1-2 Marseille  (terminé)
 
-== La Liga (31 matchs) ==
-2026-10-21  Levante 3-1 Athletic  (terminé)
+== La Liga (30 matchs) ==
 2026-10-23  Alavés 1-1 Málaga  (terminé)
 2026-10-24  Rayo Vallecano 0-3 Elche  (terminé)
 2026-10-24  Santander 2-1 Espanyol  (terminé)
