@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-10T01:28:34.627Z
+Scores mis à jour le 2026-11-10T11:02:16.530Z
 
 == Bundesliga (27 matchs) ==
 2026-10-23  Stuttgart 2-3 M'gladbach  (terminé)
@@ -69,11 +69,11 @@ Scores mis à jour le 2026-11-10T01:28:34.627Z
 2026-10-25  Real Sociedad 2-1 Levante  (terminé)
 2026-10-25  Barça 1-2 Real Madrid  (terminé)
 2026-10-26  Sevilla FC 2-0 Osasuna  (terminé)
-2026-10-30  Villarreal 0-1 Espanyol  (terminé)
-2026-10-31  Levante 0-2 Atleti  (terminé)
-2026-10-31  Rayo Vallecano 3-0 Celta  (terminé)
-2026-10-31  Real Betis 2-1 Málaga  (terminé)
-2026-10-31  Barça 6-1 Alavés  (terminé)
+2026-10-30  Villarreal 0-1 Espanyol  (2026-10-30 20:00:00Z)
+2026-10-31  Levante 0-2 Atleti  (2026-10-31 13:00:00Z)
+2026-10-31  Rayo Vallecano 3-0 Celta  (2026-10-31 15:15:00Z)
+2026-10-31  Real Betis 2-1 Málaga  (2026-10-31 17:30:00Z)
+2026-10-31  Barça 6-1 Alavés  (2026-10-31 20:00:00Z)
 2026-11-01  Getafe 3-1 Sevilla FC  (terminé)
 2026-11-01  Santander 0-3 Real Madrid  (terminé)
 2026-11-01  Elche 0-1 Valencia  (terminé)
