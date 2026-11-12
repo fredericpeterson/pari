@@ -1,7 +1,6 @@
-Scores mis à jour le 2026-11-11T19:32:25.782Z
+Scores mis à jour le 2026-11-12T02:14:15.305Z
 
-== Bundesliga (27 matchs) ==
-2026-10-23  Stuttgart 2-3 M'gladbach  (terminé)
+== Bundesliga (26 matchs) ==
 2026-10-24  Mainz 2-3 Bremen  (terminé)
 2026-10-24  1. FC Köln 0-0 Schalke  (terminé)
 2026-10-24  RB Leipzig 4-0 Elversberg  (terminé)
@@ -29,8 +28,7 @@ Scores mis à jour le 2026-11-11T19:32:25.782Z
 2026-11-08  Freiburg 2-0 Union Berlin  (terminé)
 2026-11-08  Hoffenheim 2-1 Schalke  (terminé)
 
-== Ligue 1 (27 matchs) ==
-2026-10-23  Brest 1-2 Nice  (terminé)
+== Ligue 1 (26 matchs) ==
 2026-10-24  RC Lens 2-1 Paris FC  (terminé)
 2026-10-25  Monaco 1-1 Lille  (terminé)
 2026-10-25  Marseille 4-3 Le Havre  (terminé)
@@ -58,8 +56,7 @@ Scores mis à jour le 2026-11-11T19:32:25.782Z
 2026-11-08  Angers SCO 0-2 Nice  (terminé)
 2026-11-08  RC Lens 1-2 Marseille  (terminé)
 
-== La Liga (30 matchs) ==
-2026-10-23  Alavés 1-1 Málaga  (terminé)
+== La Liga (29 matchs) ==
 2026-10-24  Rayo Vallecano 0-3 Elche  (terminé)
 2026-10-24  Santander 2-1 Espanyol  (terminé)
 2026-10-24  Valencia 1-2 Villarreal  (terminé)
@@ -90,8 +87,7 @@ Scores mis à jour le 2026-11-11T19:32:25.782Z
 2026-11-08  Villarreal 2-0 Getafe  (terminé)
 2026-11-08  Atleti 1-2 Barça  (terminé)
 
-== Premier League (30 matchs) ==
-2026-10-23  Ipswich Town 1-1 Nottingham  (terminé)
+== Premier League (29 matchs) ==
 2026-10-24  Aston Villa 2-1 Man City  (terminé)
 2026-10-24  Arsenal 2-0 Everton  (terminé)
 2026-10-24  Coventry City 0-1 Fulham  (terminé)
@@ -122,8 +118,7 @@ Scores mis à jour le 2026-11-11T19:32:25.782Z
 2026-11-08  Brighton Hove 2-0 Brentford  (terminé)
 2026-11-08  Man United 4-4 Aston Villa  (terminé)
 
-== Serie A (40 matchs) ==
-2026-10-23  Torino 3-2 Monza  (terminé)
+== Serie A (39 matchs) ==
 2026-10-24  Cagliari 0-2 Bologna  (terminé)
 2026-10-24  Como 1907 2-0 Sassuolo  (terminé)
 2026-10-24  Napoli 3-3 Roma  (terminé)
