@@ -1,8 +1,6 @@
-Scores mis à jour le 2026-11-13T19:36:32.092Z
+Scores mis à jour le 2026-11-14T01:25:55.182Z
 
-== Bundesliga (21 matchs) ==
-2026-10-25  Hoffenheim 3-0 Leverkusen  (terminé)
-2026-10-25  Freiburg 1-3 Bayern  (terminé)
+== Bundesliga (25 matchs) ==
 2026-10-30  Elversberg 4-1 Mainz  (terminé)
 2026-10-31  M'gladbach 0-0 SC Paderborn  (terminé)
 2026-10-31  Schalke 0-2 RB Leipzig  (terminé)
@@ -22,14 +20,14 @@ Scores mis à jour le 2026-11-13T19:36:32.092Z
 2026-11-08  Freiburg 2-0 Union Berlin  (terminé)
 2026-11-08  Hoffenheim 2-1 Schalke  (terminé)
 2026-11-20  Bayern vs 1. FC Köln  (à venir)
+2026-11-21  Leverkusen vs SC Paderborn  (à venir)
+2026-11-21  Union Berlin vs RB Leipzig  (à venir)
+2026-11-21  Elversberg vs Freiburg  (à venir)
+2026-11-21  M'gladbach vs Dortmund  (à venir)
+2026-11-21  Frankfurt vs Hoffenheim  (à venir)
+2026-11-21  Schalke vs Stuttgart  (à venir)
 
-== Ligue 1 (26 matchs) ==
-2026-10-25  Monaco 1-1 Lille  (terminé)
-2026-10-25  Marseille 4-3 Le Havre  (terminé)
-2026-10-25  Stade Rennais 3-0 Strasbourg  (terminé)
-2026-10-25  Angers SCO 0-0 Lorient  (terminé)
-2026-10-25  Toulouse 0-0 Troyes  (terminé)
-2026-10-25  Auxerre 1-1 Le Mans  (terminé)
+== Ligue 1 (25 matchs) ==
 2026-10-26  PSG 2-0 Olympique Lyon  (terminé)
 2026-10-30  Le Havre 1-5 PSG  (terminé)
 2026-10-30  Nice 5-2 Stade Rennais  (terminé)
@@ -50,12 +48,13 @@ Scores mis à jour le 2026-11-13T19:36:32.092Z
 2026-11-08  Angers SCO 0-2 Nice  (terminé)
 2026-11-08  RC Lens 1-2 Marseille  (terminé)
 2026-11-20  Troyes vs Le Havre  (à venir)
+2026-11-21  Nice vs PSG  (à venir)
+2026-11-21  Monaco vs Auxerre  (à venir)
+2026-11-21  RC Lens vs Toulouse  (à venir)
+2026-11-21  Lille vs Olympique Lyon  (à venir)
+2026-11-21  Strasbourg vs Brest  (à venir)
 
 == La Liga (26 matchs) ==
-2026-10-25  Athletic 4-0 Getafe  (terminé)
-2026-10-25  Celta 0-0 Real Betis  (terminé)
-2026-10-25  Real Sociedad 2-1 Levante  (terminé)
-2026-10-25  Barça 1-2 Real Madrid  (terminé)
 2026-10-26  Sevilla FC 2-0 Osasuna  (terminé)
 2026-10-30  Villarreal 0-1 Espanyol  (terminé)
 2026-10-31  Levante 0-2 Atleti  (terminé)
@@ -78,13 +77,12 @@ Scores mis à jour le 2026-11-13T19:36:32.092Z
 2026-11-08  Villarreal 2-0 Getafe  (terminé)
 2026-11-08  Atleti 1-2 Barça  (terminé)
 2026-11-20  Athletic vs Espanyol  (à venir)
+2026-11-21  Alavés vs Deportivo  (à venir)
+2026-11-21  Rayo Vallecano vs Valencia  (à venir)
+2026-11-21  Sevilla FC vs Real Betis  (à venir)
+2026-11-21  Real Madrid vs Celta  (à venir)
 
-== Premier League (25 matchs) ==
-2026-10-25  Liverpool 2-0 Brighton Hove  (terminé)
-2026-10-25  Crystal Palace 0-2 Newcastle  (terminé)
-2026-10-25  Man United 0-3 Bournemouth  (terminé)
-2026-10-25  Hull City 1-1 Brentford  (terminé)
-2026-10-25  Sunderland 0-0 Leeds United  (terminé)
+== Premier League (27 matchs) ==
 2026-10-31  Chelsea 2-0 Man United  (terminé)
 2026-10-31  Man City 0-1 Brighton Hove  (terminé)
 2026-10-31  Bournemouth 2-0 Leeds United  (terminé)
@@ -105,13 +103,15 @@ Scores mis à jour le 2026-11-13T19:36:32.092Z
 2026-11-08  Ipswich Town 1-2 Bournemouth  (terminé)
 2026-11-08  Brighton Hove 2-0 Brentford  (terminé)
 2026-11-08  Man United 4-4 Aston Villa  (terminé)
+2026-11-21  Man City vs Fulham  (à venir)
+2026-11-21  Chelsea vs Leeds United  (à venir)
+2026-11-21  Aston Villa vs Sunderland  (à venir)
+2026-11-21  Bournemouth vs Nottingham  (à venir)
+2026-11-21  Tottenham vs Ipswich Town  (à venir)
+2026-11-21  Coventry City vs Crystal Palace  (à venir)
+2026-11-21  Newcastle vs Arsenal  (à venir)
 
-== Serie A (35 matchs) ==
-2026-10-25  Inter 2-1 Fiorentina  (terminé)
-2026-10-25  Atalanta 4-4 Frosinone  (terminé)
-2026-10-25  Genoa 1-0 Venezia FC  (terminé)
-2026-10-25  Lecce 0-2 Juventus  (terminé)
-2026-10-25  Udinese 0-2 Milan  (terminé)
+== Serie A (34 matchs) ==
 2026-10-27  Sassuolo 2-6 Lazio  (terminé)
 2026-10-27  Roma 4-2 Cagliari  (terminé)
 2026-10-27  Torino 1-3 Como 1907  (terminé)
@@ -142,3 +142,7 @@ Scores mis à jour le 2026-11-13T19:36:32.092Z
 2026-11-08  Monza 0-1 Atalanta  (terminé)
 2026-11-08  Inter 2-0 Como 1907  (terminé)
 2026-11-08  Fiorentina 2-2 Juventus  (terminé)
+2026-11-21  Como 1907 vs Cagliari  (à venir)
+2026-11-21  Lazio vs Lecce  (à venir)
+2026-11-21  Parma vs Roma  (à venir)
+2026-11-21  Napoli vs Torino  (à venir)
