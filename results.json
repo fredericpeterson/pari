@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T22:45:39.737Z",
+  "updated": "2026-11-16T06:17:40.423Z",
   "competitions": {
     "BL1": {
       "teams": [
@@ -155,7 +155,8 @@
         {"id":564749,"utcDate":"2026-11-22T13:00:00Z","status":"TIMED","homeTeam":{"id":81,"name":"FC Barcelona","shortName":"Barça","tla":"FCB"},"awayTeam":{"id":94,"name":"Villarreal CF","shortName":"Villarreal","tla":"VIL"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":564750,"utcDate":"2026-11-22T15:15:00Z","status":"TIMED","homeTeam":{"id":5335,"name":"Real Racing Club de Santander","shortName":"Santander","tla":"SAN"},"awayTeam":{"id":92,"name":"Real Sociedad de Fútbol","shortName":"Real Sociedad","tla":"RSO"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":564752,"utcDate":"2026-11-22T17:30:00Z","status":"TIMED","homeTeam":{"id":79,"name":"CA Osasuna","shortName":"Osasuna","tla":"OSA"},"awayTeam":{"id":84,"name":"Málaga CF","shortName":"Málaga","tla":"MAL"},"score":{"fullTime":{"home":null,"away":null}}},
-        {"id":564753,"utcDate":"2026-11-22T20:00:00Z","status":"TIMED","homeTeam":{"id":82,"name":"Getafe CF","shortName":"Getafe","tla":"GET"},"awayTeam":{"id":78,"name":"Club Atlético de Madrid","shortName":"Atleti","tla":"ATL"},"score":{"fullTime":{"home":null,"away":null}}}
+        {"id":564753,"utcDate":"2026-11-22T20:00:00Z","status":"TIMED","homeTeam":{"id":82,"name":"Getafe CF","shortName":"Getafe","tla":"GET"},"awayTeam":{"id":78,"name":"Club Atlético de Madrid","shortName":"Atleti","tla":"ATL"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":564757,"utcDate":"2026-11-23T20:00:00Z","status":"TIMED","homeTeam":{"id":88,"name":"Levante UD","shortName":"Levante","tla":"LEV"},"awayTeam":{"id":285,"name":"Elche CF","shortName":"Elche","tla":"ELC"},"score":{"fullTime":{"home":null,"away":null}}}
       ]
     },
     "PL": {
@@ -210,7 +211,8 @@
         {"id":560650,"utcDate":"2026-11-21T15:00:00Z","status":"TIMED","homeTeam":{"id":1076,"name":"Coventry City FC","shortName":"Coventry City","tla":"COV"},"awayTeam":{"id":354,"name":"Crystal Palace FC","shortName":"Crystal Palace","tla":"CRY"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":560651,"utcDate":"2026-11-21T17:30:00Z","status":"TIMED","homeTeam":{"id":67,"name":"Newcastle United FC","shortName":"Newcastle","tla":"NEW"},"awayTeam":{"id":57,"name":"Arsenal FC","shortName":"Arsenal","tla":"ARS"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":560646,"utcDate":"2026-11-22T14:00:00Z","status":"TIMED","homeTeam":{"id":322,"name":"Hull City AFC","shortName":"Hull City","tla":"HUL"},"awayTeam":{"id":397,"name":"Brighton & Hove Albion FC","shortName":"Brighton Hove","tla":"BHA"},"score":{"fullTime":{"home":null,"away":null}}},
-        {"id":560645,"utcDate":"2026-11-22T16:30:00Z","status":"TIMED","homeTeam":{"id":64,"name":"Liverpool FC","shortName":"Liverpool","tla":"LIV"},"awayTeam":{"id":66,"name":"Manchester United FC","shortName":"Man United","tla":"MUN"},"score":{"fullTime":{"home":null,"away":null}}}
+        {"id":560645,"utcDate":"2026-11-22T16:30:00Z","status":"TIMED","homeTeam":{"id":64,"name":"Liverpool FC","shortName":"Liverpool","tla":"LIV"},"awayTeam":{"id":66,"name":"Manchester United FC","shortName":"Man United","tla":"MUN"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":560649,"utcDate":"2026-11-23T20:00:00Z","status":"TIMED","homeTeam":{"id":402,"name":"Brentford FC","shortName":"Brentford","tla":"BRE"},"awayTeam":{"id":62,"name":"Everton FC","shortName":"Everton","tla":"EVE"},"score":{"fullTime":{"home":null,"away":null}}}
       ]
     },
     "SA": {
@@ -237,9 +239,6 @@
         {"id":454,"name":"Venezia FC","shortName":"Venezia FC","tla":"VEN"}
       ],
       "matches": [
-        {"id":558556,"utcDate":"2026-10-27T17:30:00Z","status":"FINISHED","homeTeam":{"id":471,"name":"US Sassuolo Calcio","shortName":"Sassuolo","tla":"SAS"},"awayTeam":{"id":110,"name":"SS Lazio","shortName":"Lazio","tla":"LAZ"},"score":{"fullTime":{"home":2,"away":6}}},
-        {"id":558555,"utcDate":"2026-10-27T19:45:00Z","status":"FINISHED","homeTeam":{"id":100,"name":"AS Roma","shortName":"Roma","tla":"ROM"},"awayTeam":{"id":104,"name":"Cagliari Calcio","shortName":"Cagliari","tla":"CAG"},"score":{"fullTime":{"home":4,"away":2}}},
-        {"id":558557,"utcDate":"2026-10-27T19:45:00Z","status":"FINISHED","homeTeam":{"id":586,"name":"Torino FC","shortName":"Torino","tla":"TOR"},"awayTeam":{"id":7397,"name":"Como 1907","shortName":"Como 1907","tla":"COM"},"score":{"fullTime":{"home":1,"away":3}}},
         {"id":558549,"utcDate":"2026-10-28T17:30:00Z","status":"FINISHED","homeTeam":{"id":98,"name":"AC Milan","shortName":"Milan","tla":"MIL"},"awayTeam":{"id":103,"name":"Bologna FC 1909","shortName":"Bologna","tla":"BOL"},"score":{"fullTime":{"home":2,"away":4}}},
         {"id":558550,"utcDate":"2026-10-28T17:30:00Z","status":"FINISHED","homeTeam":{"id":454,"name":"Venezia FC","shortName":"Venezia FC","tla":"VEN"},"awayTeam":{"id":108,"name":"FC Internazionale Milano","shortName":"Inter","tla":"INT"},"score":{"fullTime":{"home":0,"away":2}}},
         {"id":558553,"utcDate":"2026-10-28T17:30:00Z","status":"FINISHED","homeTeam":{"id":112,"name":"Parma Calcio 1913","shortName":"Parma","tla":"PAR"},"awayTeam":{"id":115,"name":"Udinese Calcio","shortName":"Udinese","tla":"UDI"},"score":{"fullTime":{"home":0,"away":0}}},
@@ -275,7 +274,8 @@
         {"id":558522,"utcDate":"2026-11-22T14:00:00Z","status":"TIMED","homeTeam":{"id":103,"name":"Bologna FC 1909","shortName":"Bologna","tla":"BOL"},"awayTeam":{"id":115,"name":"Udinese Calcio","shortName":"Udinese","tla":"UDI"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":558524,"utcDate":"2026-11-22T14:00:00Z","status":"TIMED","homeTeam":{"id":471,"name":"US Sassuolo Calcio","shortName":"Sassuolo","tla":"SAS"},"awayTeam":{"id":107,"name":"Genoa CFC","shortName":"Genoa","tla":"GEN"},"score":{"fullTime":{"home":null,"away":null}}},
         {"id":558523,"utcDate":"2026-11-22T17:00:00Z","status":"TIMED","homeTeam":{"id":98,"name":"AC Milan","shortName":"Milan","tla":"MIL"},"awayTeam":{"id":470,"name":"Frosinone Calcio","shortName":"Frosinone","tla":"FRO"},"score":{"fullTime":{"home":null,"away":null}}},
-        {"id":558520,"utcDate":"2026-11-22T19:45:00Z","status":"TIMED","homeTeam":{"id":102,"name":"Atalanta BC","shortName":"Atalanta","tla":"ATA"},"awayTeam":{"id":108,"name":"FC Internazionale Milano","shortName":"Inter","tla":"INT"},"score":{"fullTime":{"home":null,"away":null}}}
+        {"id":558520,"utcDate":"2026-11-22T19:45:00Z","status":"TIMED","homeTeam":{"id":102,"name":"Atalanta BC","shortName":"Atalanta","tla":"ATA"},"awayTeam":{"id":108,"name":"FC Internazionale Milano","shortName":"Inter","tla":"INT"},"score":{"fullTime":{"home":null,"away":null}}},
+        {"id":558519,"utcDate":"2026-11-23T19:45:00Z","status":"TIMED","homeTeam":{"id":5911,"name":"AC Monza","shortName":"Monza","tla":"MON"},"awayTeam":{"id":99,"name":"ACF Fiorentina","shortName":"Fiorentina","tla":"FIO"},"score":{"fullTime":{"home":null,"away":null}}}
       ]
     }
   }
