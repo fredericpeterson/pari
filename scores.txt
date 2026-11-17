@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-16T19:31:54.493Z
+Scores mis à jour le 2026-11-17T03:46:32.062Z
 
 == Bundesliga (27 matchs) ==
 2026-10-30  Elversberg 4-1 Mainz  (terminé)
@@ -122,12 +122,7 @@ Scores mis à jour le 2026-11-16T19:31:54.493Z
 2026-11-22  Liverpool vs Man United  (à venir)
 2026-11-23  Brentford vs Everton  (à venir)
 
-== Serie A (37 matchs) ==
-2026-10-28  Milan 2-4 Bologna  (terminé)
-2026-10-28  Venezia FC 0-2 Inter  (terminé)
-2026-10-28  Parma 0-0 Udinese  (terminé)
-2026-10-28  Genoa 2-0 Juventus  (terminé)
-2026-10-28  Monza 1-4 Napoli  (terminé)
+== Serie A (32 matchs) ==
 2026-10-29  Frosinone 5-1 Lecce  (terminé)
 2026-10-29  Fiorentina 2-2 Atalanta  (terminé)
 2026-10-31  Bologna 2-1 Monza  (terminé)
