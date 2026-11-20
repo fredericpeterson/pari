@@ -1,12 +1,6 @@
-Scores mis à jour le 2026-11-19T20:28:59.515Z
+Scores mis à jour le 2026-11-20T02:15:57.543Z
 
-== Bundesliga (26 matchs) ==
-2026-10-31  M'gladbach 0-0 SC Paderborn  (terminé)
-2026-10-31  Schalke 0-2 RB Leipzig  (terminé)
-2026-10-31  Augsburg 1-2 Freiburg  (terminé)
-2026-10-31  Bremen 2-0 Hoffenheim  (terminé)
-2026-10-31  Leverkusen 2-4 Stuttgart  (terminé)
-2026-10-31  Bayern 2-2 Dortmund  (terminé)
+== Bundesliga (21 matchs) ==
 2026-11-01  Union Berlin 1-1 1. FC Köln  (terminé)
 2026-11-01  Frankfurt 3-1 HSV  (terminé)
 2026-11-06  HSV 3-1 M'gladbach  (terminé)
@@ -27,9 +21,9 @@ Scores mis à jour le 2026-11-19T20:28:59.515Z
 2026-11-21  Schalke vs Stuttgart  (à venir)
 2026-11-22  Augsburg vs Mainz  (à venir)
 2026-11-22  Bremen vs HSV  (à venir)
+2026-11-27  Bremen vs M'gladbach  (à venir)
 
 == Ligue 1 (24 matchs) ==
-2026-10-31  Troyes 2-0 Le Mans  (terminé)
 2026-11-01  Strasbourg 5-1 Auxerre  (terminé)
 2026-11-01  Olympique Lyon 2-0 Angers SCO  (terminé)
 2026-11-01  Paris FC 3-1 Monaco  (terminé)
@@ -53,12 +47,9 @@ Scores mis à jour le 2026-11-19T20:28:59.515Z
 2026-11-22  Paris FC vs Angers SCO  (à venir)
 2026-11-22  Lorient vs Stade Rennais  (à venir)
 2026-11-22  Marseille vs Le Mans  (à venir)
+2026-11-27  Brest vs Paris FC  (à venir)
 
-== La Liga (29 matchs) ==
-2026-10-31  Levante 0-2 Atleti  (terminé)
-2026-10-31  Rayo Vallecano 3-0 Celta  (terminé)
-2026-10-31  Real Betis 2-1 Málaga  (terminé)
-2026-10-31  Barça 6-1 Alavés  (terminé)
+== La Liga (26 matchs) ==
 2026-11-01  Getafe 3-1 Sevilla FC  (terminé)
 2026-11-01  Santander 0-3 Real Madrid  (terminé)
 2026-11-01  Elche 0-1 Valencia  (terminé)
@@ -84,16 +75,9 @@ Scores mis à jour le 2026-11-19T20:28:59.515Z
 2026-11-22  Osasuna vs Málaga  (à venir)
 2026-11-22  Getafe vs Atleti  (à venir)
 2026-11-23  Levante vs Elche  (à venir)
+2026-11-27  Levante vs Santander  (à venir)
 
-== Premier League (30 matchs) ==
-2026-10-31  Chelsea 2-0 Man United  (terminé)
-2026-10-31  Man City 0-1 Brighton Hove  (terminé)
-2026-10-31  Bournemouth 2-0 Leeds United  (terminé)
-2026-10-31  Coventry City 3-1 Sunderland  (terminé)
-2026-10-31  Hull City 2-2 Ipswich Town  (terminé)
-2026-10-31  Brentford 2-0 Nottingham  (terminé)
-2026-10-31  Tottenham 2-0 Crystal Palace  (terminé)
-2026-10-31  Aston Villa 1-1 Fulham  (terminé)
+== Premier League (23 matchs) ==
 2026-11-01  Liverpool 0-1 Arsenal  (terminé)
 2026-11-02  Newcastle 0-1 Everton  (terminé)
 2026-11-06  Everton 3-1 Coventry City  (terminé)
@@ -116,11 +100,9 @@ Scores mis à jour le 2026-11-19T20:28:59.515Z
 2026-11-22  Hull City vs Brighton Hove  (à venir)
 2026-11-22  Liverpool vs Man United  (à venir)
 2026-11-23  Brentford vs Everton  (à venir)
+2026-11-27  Nottingham vs Chelsea  (à venir)
 
-== Serie A (30 matchs) ==
-2026-10-31  Bologna 2-1 Monza  (terminé)
-2026-10-31  Udinese 2-5 Roma  (terminé)
-2026-10-31  Milan 3-1 Inter  (terminé)
+== Serie A (28 matchs) ==
 2026-11-01  Como 1907 1-0 Venezia FC  (terminé)
 2026-11-01  Frosinone 2-0 Torino  (terminé)
 2026-11-01  Lazio 2-1 Cagliari  (terminé)
@@ -148,3 +130,4 @@ Scores mis à jour le 2026-11-19T20:28:59.515Z
 2026-11-22  Milan vs Frosinone  (à venir)
 2026-11-22  Atalanta vs Inter  (à venir)
 2026-11-23  Monza vs Fiorentina  (à venir)
+2026-11-27  Venezia FC vs Bologna  (à venir)
