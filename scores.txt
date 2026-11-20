@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-20T11:26:19.060Z
+Scores mis à jour le 2026-11-20T20:04:36.245Z
 
 == Bundesliga (21 matchs) ==
 2026-11-01  Union Berlin 1-1 1. FC Köln  (terminé)
@@ -12,7 +12,7 @@ Scores mis à jour le 2026-11-20T11:26:19.060Z
 2026-11-08  1. FC Köln 1-2 Leverkusen  (terminé)
 2026-11-08  Freiburg 2-0 Union Berlin  (terminé)
 2026-11-08  Hoffenheim 2-1 Schalke  (terminé)
-2026-11-20  Bayern vs 1. FC Köln  (à venir)
+2026-11-20  Bayern 0-1 1. FC Köln  (en cours)
 2026-11-21  Leverkusen vs SC Paderborn  (à venir)
 2026-11-21  Union Berlin vs RB Leipzig  (à venir)
 2026-11-21  Elversberg vs Freiburg  (à venir)
@@ -38,7 +38,7 @@ Scores mis à jour le 2026-11-20T11:26:19.060Z
 2026-11-08  Le Havre 0-2 Lorient  (terminé)
 2026-11-08  Angers SCO 0-2 Nice  (terminé)
 2026-11-08  RC Lens 1-2 Marseille  (terminé)
-2026-11-20  Troyes vs Le Havre  (à venir)
+2026-11-20  Troyes 0-1 Le Havre  (en cours)
 2026-11-21  Nice vs PSG  (à venir)
 2026-11-21  Monaco vs Auxerre  (à venir)
 2026-11-21  RC Lens vs Toulouse  (à venir)
@@ -65,7 +65,7 @@ Scores mis à jour le 2026-11-20T11:26:19.060Z
 2026-11-08  Celta 0-0 Levante  (terminé)
 2026-11-08  Villarreal 2-0 Getafe  (terminé)
 2026-11-08  Atleti 1-2 Barça  (terminé)
-2026-11-20  Athletic vs Espanyol  (à venir)
+2026-11-20  Athletic 0-0 Espanyol  (en cours)
 2026-11-21  Alavés vs Deportivo  (à venir)
 2026-11-21  Rayo Vallecano vs Valencia  (à venir)
 2026-11-21  Sevilla FC vs Real Betis  (à venir)
