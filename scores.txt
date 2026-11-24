@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-23T12:21:03.870Z
+Scores mis à jour le 2026-11-24T02:09:27.324Z
 
 == Bundesliga (27 matchs) ==
 2026-11-06  HSV 3-1 M'gladbach  (terminé)
@@ -78,7 +78,7 @@ Scores mis à jour le 2026-11-23T12:21:03.870Z
 2026-11-22  Santander 3-2 Real Sociedad  (terminé)
 2026-11-22  Osasuna 1-0 Málaga  (terminé)
 2026-11-22  Getafe 0-3 Atleti  (terminé)
-2026-11-23  Levante vs Elche  (à venir)
+2026-11-23  Levante 1-1 Elche  (terminé)
 2026-11-27  Levante vs Santander  (à venir)
 2026-11-28  Real Betis vs Rayo Vallecano  (à venir)
 2026-11-28  Málaga vs Athletic  (à venir)
@@ -90,7 +90,7 @@ Scores mis à jour le 2026-11-23T12:21:03.870Z
 2026-11-29  Real Sociedad vs Sevilla FC  (à venir)
 2026-11-30  Espanyol vs Getafe  (à venir)
 
-== Premier League (30 matchs) ==
+== Premier League (31 matchs) ==
 2026-11-06  Everton 3-1 Coventry City  (terminé)
 2026-11-07  Leeds United 1-0 Tottenham  (terminé)
 2026-11-07  Arsenal 1-0 Hull City  (terminé)
@@ -110,7 +110,7 @@ Scores mis à jour le 2026-11-23T12:21:03.870Z
 2026-11-21  Newcastle 2-2 Arsenal  (terminé)
 2026-11-22  Hull City 2-0 Brighton Hove  (terminé)
 2026-11-22  Liverpool 4-0 Man United  (terminé)
-2026-11-23  Brentford vs Everton  (à venir)
+2026-11-23  Brentford 4-0 Everton  (terminé)
 2026-11-27  Nottingham vs Chelsea  (à venir)
 2026-11-28  Leeds United vs Coventry City  (à venir)
 2026-11-28  Man United vs Brentford  (à venir)
@@ -121,6 +121,7 @@ Scores mis à jour le 2026-11-23T12:21:03.870Z
 2026-11-29  Sunderland vs Tottenham  (à venir)
 2026-11-29  Crystal Palace vs Hull City  (à venir)
 2026-11-29  Arsenal vs Man City  (à venir)
+2026-12-01  Coventry City vs Ipswich Town  (à venir)
 
 == Serie A (30 matchs) ==
 2026-11-06  Venezia FC 2-1 Udinese  (terminé)
@@ -142,7 +143,7 @@ Scores mis à jour le 2026-11-23T12:21:03.870Z
 2026-11-22  Sassuolo 0-2 Genoa  (terminé)
 2026-11-22  Milan 5-1 Frosinone  (terminé)
 2026-11-22  Atalanta 4-4 Inter  (terminé)
-2026-11-23  Monza vs Fiorentina  (à venir)
+2026-11-23  Monza 3-0 Fiorentina  (terminé)
 2026-11-27  Venezia FC vs Bologna  (à venir)
 2026-11-28  Frosinone vs Parma  (à venir)
 2026-11-28  Torino vs Lazio  (à venir)
