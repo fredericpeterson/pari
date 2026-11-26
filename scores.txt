@@ -1,7 +1,6 @@
-Scores mis à jour le 2026-11-25T19:10:34.095Z
+Scores mis à jour le 2026-11-26T03:30:46.252Z
 
-== Bundesliga (27 matchs) ==
-2026-11-06  HSV 3-1 M'gladbach  (terminé)
+== Bundesliga (26 matchs) ==
 2026-11-07  RB Leipzig 5-2 Augsburg  (terminé)
 2026-11-07  Dortmund 2-1 Elversberg  (terminé)
 2026-11-07  Mainz 1-2 Bayern  (terminé)
@@ -29,8 +28,7 @@ Scores mis à jour le 2026-11-25T19:10:34.095Z
 2026-11-29  Hoffenheim vs Augsburg  (à venir)
 2026-11-29  Dortmund vs Leverkusen  (à venir)
 
-== Ligue 1 (27 matchs) ==
-2026-11-06  Toulouse 3-1 Strasbourg  (terminé)
+== Ligue 1 (26 matchs) ==
 2026-11-07  Auxerre 0-1 Paris FC  (terminé)
 2026-11-07  PSG 1-0 Troyes  (terminé)
 2026-11-08  Stade Rennais 1-2 Lille  (terminé)
@@ -58,8 +56,7 @@ Scores mis à jour le 2026-11-25T19:10:34.095Z
 2026-11-29  Toulouse vs Stade Rennais  (à venir)
 2026-11-29  Olympique Lyon vs Monaco  (à venir)
 
-== La Liga (32 matchs) ==
-2026-11-06  Sevilla FC 0-0 Alavés  (terminé)
+== La Liga (31 matchs) ==
 2026-11-07  Málaga 1-2 Santander  (terminé)
 2026-11-07  Espanyol 0-0 Deportivo  (terminé)
 2026-11-07  Osasuna 1-1 Athletic  (terminé)
@@ -93,7 +90,6 @@ Scores mis à jour le 2026-11-25T19:10:34.095Z
 2026-12-02  Barça vs Atleti  (à venir)
 
 == Premier League (39 matchs) ==
-2026-11-06  Everton 3-1 Coventry City  (terminé)
 2026-11-07  Leeds United 1-0 Tottenham  (terminé)
 2026-11-07  Arsenal 1-0 Hull City  (terminé)
 2026-11-07  Fulham 1-1 Newcastle  (terminé)
@@ -132,9 +128,9 @@ Scores mis à jour le 2026-11-25T19:10:34.095Z
 2026-12-02  Brentford vs Arsenal  (à venir)
 2026-12-02  Newcastle vs Man United  (à venir)
 2026-12-02  Bournemouth vs Brighton Hove  (à venir)
+2026-12-03  Tottenham vs Fulham  (à venir)
 
-== Serie A (30 matchs) ==
-2026-11-06  Venezia FC 2-1 Udinese  (terminé)
+== Serie A (29 matchs) ==
 2026-11-07  Torino 1-1 Lecce  (terminé)
 2026-11-07  Cagliari 1-0 Frosinone  (terminé)
 2026-11-07  Parma 1-2 Bologna  (terminé)
