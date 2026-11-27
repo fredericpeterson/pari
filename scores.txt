@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-27T12:05:39.963Z
+Scores mis à jour le 2026-11-27T21:08:35.099Z
 
 == Bundesliga (22 matchs) ==
 2026-11-08  1. FC Köln 1-2 Leverkusen  (terminé)
@@ -40,7 +40,7 @@ Scores mis à jour le 2026-11-27T12:05:39.963Z
 2026-11-22  Paris FC 4-0 Angers SCO  (terminé)
 2026-11-22  Lorient 1-1 Stade Rennais  (terminé)
 2026-11-22  Marseille 2-3 Le Mans  (terminé)
-2026-11-27  Brest vs Paris FC  (à venir)
+2026-11-27  Brest 1-0 Paris FC  (en cours)
 2026-11-28  Angers SCO vs RC Lens  (à venir)
 2026-11-28  Le Mans vs Lille  (à venir)
 2026-11-28  Nice vs Troyes  (à venir)
@@ -67,7 +67,7 @@ Scores mis à jour le 2026-11-27T12:05:39.963Z
 2026-11-22  Osasuna 1-0 Málaga  (terminé)
 2026-11-22  Getafe 0-3 Atleti  (terminé)
 2026-11-23  Levante 1-1 Elche  (terminé)
-2026-11-27  Levante vs Santander  (à venir)
+2026-11-27  Levante 1-0 Santander  (en cours)
 2026-11-28  Real Betis vs Rayo Vallecano  (à venir)
 2026-11-28  Málaga vs Athletic  (à venir)
 2026-11-28  Elche vs Atleti  (à venir)
@@ -97,7 +97,7 @@ Scores mis à jour le 2026-11-27T12:05:39.963Z
 2026-11-22  Hull City 2-0 Brighton Hove  (terminé)
 2026-11-22  Liverpool 4-0 Man United  (terminé)
 2026-11-23  Brentford 4-0 Everton  (terminé)
-2026-11-27  Nottingham vs Chelsea  (à venir)
+2026-11-27  Nottingham 1-0 Chelsea  (en cours)
 2026-11-28  Leeds United vs Coventry City  (à venir)
 2026-11-28  Man United vs Brentford  (à venir)
 2026-11-28  Ipswich Town vs Aston Villa  (à venir)
@@ -134,7 +134,7 @@ Scores mis à jour le 2026-11-27T12:05:39.963Z
 2026-11-22  Milan 5-1 Frosinone  (terminé)
 2026-11-22  Atalanta 4-4 Inter  (terminé)
 2026-11-23  Monza 3-0 Fiorentina  (terminé)
-2026-11-27  Venezia FC vs Bologna  (à venir)
+2026-11-27  Venezia FC 0-0 Bologna  (en cours)
 2026-11-28  Frosinone vs Parma  (à venir)
 2026-11-28  Torino vs Lazio  (à venir)
 2026-11-28  Inter vs Genoa  (à venir)
