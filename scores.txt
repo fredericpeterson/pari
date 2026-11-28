@@ -1,4 +1,4 @@
-Scores mis à jour le 2026-11-28T03:15:26.818Z
+Scores mis à jour le 2026-11-28T15:25:27.736Z
 
 == Bundesliga (25 matchs) ==
 2026-11-20  Bayern 1-1 1. FC Köln  (terminé)
@@ -11,10 +11,10 @@ Scores mis à jour le 2026-11-28T03:15:26.818Z
 2026-11-22  Augsburg 3-1 Mainz  (terminé)
 2026-11-22  Bremen 4-0 HSV  (terminé)
 2026-11-27  Bremen 3-3 M'gladbach  (terminé)
-2026-11-28  1. FC Köln vs Elversberg  (à venir)
-2026-11-28  Mainz vs Union Berlin  (à venir)
-2026-11-28  SC Paderborn vs Schalke  (à venir)
-2026-11-28  HSV vs Bayern  (à venir)
+2026-11-28  1. FC Köln 3-0 Elversberg  (en cours)
+2026-11-28  Mainz 0-1 Union Berlin  (en cours)
+2026-11-28  SC Paderborn 3-0 Schalke  (en cours)
+2026-11-28  HSV 0-0 Bayern  (en cours)
 2026-11-28  Stuttgart vs Frankfurt  (à venir)
 2026-11-29  Freiburg vs RB Leipzig  (à venir)
 2026-11-29  Hoffenheim vs Augsburg  (à venir)
@@ -65,8 +65,8 @@ Scores mis à jour le 2026-11-28T03:15:26.818Z
 2026-11-22  Getafe 0-3 Atleti  (terminé)
 2026-11-23  Levante 1-1 Elche  (terminé)
 2026-11-27  Levante 1-3 Santander  (terminé)
-2026-11-28  Real Betis vs Rayo Vallecano  (à venir)
-2026-11-28  Málaga vs Athletic  (à venir)
+2026-11-28  Real Betis 0-1 Rayo Vallecano  (terminé)
+2026-11-28  Málaga 0-0 Athletic  (en cours)
 2026-11-28  Elche vs Atleti  (à venir)
 2026-11-28  Real Madrid vs Alavés  (à venir)
 2026-11-29  Valencia vs Osasuna  (à venir)
@@ -94,8 +94,8 @@ Scores mis à jour le 2026-11-28T03:15:26.818Z
 2026-11-22  Liverpool 4-0 Man United  (terminé)
 2026-11-23  Brentford 4-0 Everton  (terminé)
 2026-11-27  Nottingham 3-2 Chelsea  (terminé)
-2026-11-28  Leeds United vs Coventry City  (à venir)
-2026-11-28  Man United vs Brentford  (à venir)
+2026-11-28  Leeds United 0-0 Coventry City  (en cours)
+2026-11-28  Man United 0-1 Brentford  (en cours)
 2026-11-28  Ipswich Town vs Aston Villa  (à venir)
 2026-11-29  Everton vs Liverpool  (à venir)
 2026-11-29  Fulham vs Bournemouth  (à venir)
